@@ -25,51 +25,39 @@ class Footer extends React.Component {
     return (
       <footer className="nav-footer" id="footer">
         <section className="sitemap">
-          <a href={this.props.config.baseUrl} className="nav-home">
-            {this.props.config.footerIcon && (
-              <img
-                src={this.props.config.baseUrl + this.props.config.footerIcon}
-                alt={this.props.config.title}
-                width="66"
-                height="58"
-              />
-            )}
-          </a>
           <div>
             <h5>Docs</h5>
-            <a href={this.docUrl('doc1.html', this.props.language)}>
-              Getting Started (or other categories)
+            <a href={this.docUrl('intro', this.props.language)}>
+              Getting Started
             </a>
-            <a href={this.docUrl('doc2.html', this.props.language)}>
-              Guides (or other categories)
+            <a href={this.docUrl('install', this.props.language)}>
+              Install
             </a>
-            <a href={this.docUrl('doc3.html', this.props.language)}>
-              API Reference (or other categories)
+            <a href={this.docUrl('example', this.props.language)}>
+              Example
+            </a>
+            <a href={this.docUrl('api-queries', this.props.language)}>
+              API
             </a>
           </div>
           <div>
             <h5>Community</h5>
-            <a href={this.pageUrl('users.html', this.props.language)}>
-              User Showcase
-            </a>
             <a
-              href="http://stackoverflow.com/questions/tagged/"
+              href="http://stackoverflow.com/questions/tagged/native-testing-library"
               target="_blank"
               rel="noreferrer noopener">
               Stack Overflow
             </a>
-            <a href="https://discordapp.com/">Project Chat</a>
+            <a href="https://reactiflux.com/">Reactiflux on Discord</a>
             <a
-              href="https://twitter.com/"
+              href="https://twitter.com/bcarroll22"
               target="_blank"
               rel="noreferrer noopener">
-              Twitter
+              Follow on Twitter
             </a>
           </div>
           <div>
             <h5>More</h5>
-            <a href={`${this.props.config.baseUrl}blog`}>Blog</a>
-            <a href="https://github.com/">GitHub</a>
             <a
               className="github-button"
               href={this.props.config.repoUrl}
@@ -80,21 +68,10 @@ class Footer extends React.Component {
               aria-label="Star this project on GitHub">
               Star
             </a>
+            <a href="https://github.com/bcarroll22/native-testing-library">GitHub</a>
+            <a href="https://github.com/bcarroll22/native-testing-library-docs">Edit the docs</a>
           </div>
         </section>
-
-        <a
-          href="https://opensource.facebook.com/"
-          target="_blank"
-          rel="noreferrer noopener"
-          className="fbOpenSource">
-          <img
-            src={`${this.props.config.baseUrl}img/oss_logo.png`}
-            alt="Facebook Open Source"
-            width="170"
-            height="45"
-          />
-        </a>
         <section className="copyright">{this.props.config.copyright}</section>
       </footer>
     );

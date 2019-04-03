@@ -9,79 +9,77 @@
 // site configuration options.
 
 // List of projects/orgs using your project for the users page.
-const users = [
-  {
-    caption: 'User1',
-    // You will need to prepend the image path with your baseUrl
-    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
-    image: '/img/docusaurus.svg',
-    infoLink: 'https://www.facebook.com',
-    pinned: true,
-  },
-];
+//const users = [
+//  {
+//    caption: 'User1',
+//    // You will need to prepend the image path with your baseUrl
+//    // if it is not '/', like: '/test-site/img/docusaurus.svg'.
+//    image: '/img/docusaurus.svg',
+//    infoLink: 'https://www.facebook.com',
+//    pinned: true,
+//  },
+//];
 
 const siteConfig = {
-  title: 'Test Site', // Title for your website.
-  tagline: 'A website for testing',
-  url: 'https://your-docusaurus-test-site.com', // Your website URL
+  title: 'React Native Testing Library', // Title for your website.
+  tagline:
+    'Simple and complete React Native testing utilities that encourage good testing practices.',
+  url: 'https://native-testing-library.com', // Your website URL
   baseUrl: '/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
 
   // Used for publishing and more
-  projectName: 'test-site',
-  organizationName: 'facebook',
+  projectName: 'native-testing-library-docs',
+  organizationName: 'bcarroll22',
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
   //   organizationName: 'JoelMarcey'
 
   // For no header links in the top nav bar -> headerLinks: [],
-  headerLinks: [
-    {doc: 'doc1', label: 'Docs'},
-    {doc: 'doc4', label: 'API'},
-    {page: 'help', label: 'Help'},
-    {blog: true, label: 'Blog'},
-  ],
+  headerLinks: [{ doc: 'intro', label: 'Docs' }],
 
   // If you have users set above, you add it here:
-  users,
+  //  users,
 
   /* path to images for header/footer */
-  headerIcon: 'img/docusaurus.svg',
-  footerIcon: 'img/docusaurus.svg',
-  favicon: 'img/favicon.png',
+  headerIcon: 'img/mascot-64x64.png',
+  footerIcon: 'img/mascot-128x128.png',
+  favicon: 'img/mascot-32x32.png',
 
   /* Colors for website */
   colors: {
-    primaryColor: '#2E8555',
-    secondaryColor: '#205C3B',
+    primaryColor: '#424953',
+    secondaryColor: '#35BB9B',
   },
+
+  stylesheets: [
+    'https://fonts.googleapis.com/css?family=IBM+Plex+Mono:500,700|Source+Code+Pro:500,700|Source+Sans+Pro:400,400i,700',
+    '/css/code-block-buttons.css',
+  ],
 
   /* Custom fonts for website */
-  /*
   fonts: {
-    myFont: [
-      "Times New Roman",
-      "Serif"
-    ],
-    myOtherFont: [
-      "-apple-system",
-      "system-ui"
-    ]
+    fontMain: ['Source Sans Pro', 'sans-serif'],
+    fontCode: ['IBM Plex Mono', 'monospace'],
   },
-  */
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
-  copyright: `Copyright © ${new Date().getFullYear()} Your Name or Your Company Name`,
+  copyright: `Copyright © ${new Date().getFullYear()} Brandon Carroll`,
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks.
     theme: 'default',
+    defaultLang: 'javascript',
   },
 
   // Add custom scripts here that would be placed in <script> tags.
-  scripts: ['https://buttons.github.io/buttons.js'],
+  scripts: [
+    'https://buttons.github.io/buttons.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js',
+    '/js/code-block-buttons.js',
+  ],
 
   // On page navigation for the current documentation page.
   onPageNav: 'separate',
@@ -89,18 +87,24 @@ const siteConfig = {
   cleanUrl: true,
 
   // Open Graph and Twitter card images.
-  ogImage: 'img/docusaurus.png',
-  twitterImage: 'img/docusaurus.png',
+  ogImage: 'img/mascot-128x128.png',
+  twitterImage: 'img/mascot-128x128.png',
 
   // Show documentation's last contributor's name.
   // enableUpdateBy: true,
 
   // Show documentation's last update time.
-  // enableUpdateTime: true,
+  enableUpdateTime: true,
 
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...
-  //   repoUrl: 'https://github.com/facebook/test-site',
+  repoUrl: 'https://github.com/bcarroll22/native-testing-library',
+  docsRepoUrl: 'https://github.com/bcarroll2/native-testing-library-docs',
+
+  algolia: {
+    apiKey: 'e17df0b04917412fc03a6e92a2ca087e',
+    indexName: 'bcarroll22-native-testing-library',
+  },
 };
 
 module.exports = siteConfig;

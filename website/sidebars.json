@@ -1,0 +1,6 @@
+{
+  "docs": {
+    "Getting started": ["intro", "install", "example", "setup", "guiding-principles"],
+    "API": ["api-queries", "api-events", "api-async", "api-helpers", "api-render", "api-render-hook", "api-act"]
+  }
+}

@@ -1,0 +1,22 @@
+/* your custom css */
+body {
+    font-family: $fontMain;
+    font-size: 18px;
+}
+
+pre,
+code {
+    font-family: $fontCode;
+}
+
+.hljs {
+    font-size: 13px;
+}
+
+a {
+    color: $secondaryColor;
+}
+
+.nav-footer {
+    background-color: $primaryColor;
+}

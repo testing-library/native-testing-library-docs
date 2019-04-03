@@ -15,8 +15,8 @@ const GridBlock = CompLibrary.GridBlock;
 
 class HomeSplash extends React.Component {
   render() {
-    const {siteConfig, language = ''} = this.props;
-    const {baseUrl, docsUrl} = siteConfig;
+    const { siteConfig, language = '' } = this.props;
+    const { baseUrl, docsUrl } = siteConfig;
     const docsPart = `${docsUrl ? `${docsUrl}/` : ''}`;
     const langPart = `${language ? `${language}/` : ''}`;
     const docUrl = doc => `${baseUrl}${docsPart}${langPart}${doc}`;
@@ -60,13 +60,10 @@ class HomeSplash extends React.Component {
 
     return (
       <SplashContainer>
-        <Logo img_src={`${baseUrl}img/docusaurus.svg`} />
         <div className="inner">
           <ProjectTitle siteConfig={siteConfig} />
           <PromoSection>
-            <Button href="#try">Try It Out</Button>
-            <Button href={docUrl('doc1.html')}>Example Link</Button>
-            <Button href={docUrl('doc2.html')}>Example Link 2</Button>
+            <Button href={docUrl('intro')}>Get Started</Button>
           </PromoSection>
         </div>
       </SplashContainer>
@@ -76,29 +73,27 @@ class HomeSplash extends React.Component {
 
 class Index extends React.Component {
   render() {
-    const {config: siteConfig, language = ''} = this.props;
-    const {baseUrl} = siteConfig;
+    const { config: siteConfig, language = '' } = this.props;
+    const { baseUrl } = siteConfig;
 
     const Block = props => (
-      <Container
-        padding={['bottom', 'top']}
-        id={props.id}
-        background={props.background}>
-        <GridBlock
-          align="center"
-          contents={props.children}
-          layout={props.layout}
-        />
+      <Container padding={['bottom', 'top']} id={props.id} background={props.background}>
+        <GridBlock align="center" contents={props.children} layout={props.layout} />
       </Container>
     );
 
     const FeatureCallout = () => (
-      <div
-        className="productShowcaseSection paddingBottom"
-        style={{textAlign: 'center'}}>
-        <h2>Feature Callout</h2>
-        <MarkdownBlock>These are features of this project</MarkdownBlock>
-      </div>
+      <Container className="" background={'light'} padding={['top', 'bottom']}>
+        <div style={{ textAlign: 'center' }}>
+          <p>
+            <i>
+              The more your tests resemble the way your software is used, <br />
+              the more confidence they can give you.
+            </i>
+          </p>
+          <MarkdownBlock>`npm install --save-dev native-testing-library`</MarkdownBlock>
+        </div>
+      </Container>
     );
 
     const TryOut = () => (
@@ -118,8 +113,7 @@ class Index extends React.Component {
       <Block background="dark">
         {[
           {
-            content:
-              'This is another description of how this project is useful',
+            content: 'This is another description of how this project is useful',
             image: `${baseUrl}img/docusaurus.svg`,
             imageAlign: 'right',
             title: 'Description',
@@ -193,12 +187,7 @@ class Index extends React.Component {
       <div>
         <HomeSplash siteConfig={siteConfig} language={language} />
         <div className="mainContainer">
-          <Features />
           <FeatureCallout />
-          <LearnHow />
-          <TryOut />
-          <Description />
-          <Showcase />
         </div>
       </div>
     );
