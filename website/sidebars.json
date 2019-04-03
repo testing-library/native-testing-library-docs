@@ -1,6 +1,35 @@
 {
   "docs": {
     "Getting started": ["intro", "install", "example", "setup", "guiding-principles"],
-    "API": ["api-queries", "api-events", "api-async", "api-helpers", "api-render", "api-render-hook", "api-act"]
+    "Guides": ["guide-queries","guide-disappearance"],
+    "API": [
+      "api-queries",
+      "api-events",
+      "api-async",
+      "api-helpers",
+      "api-render",
+      "api-render-hook",
+      "api-act"
+    ],
+    "Examples": [
+      "example-context",
+      "example-input-event",
+      "example-intl",
+      "example-navigation",
+      "example-redux",
+      "example-update-props"
+    ],
+    "Hook Examples": [
+      "hook-example-async",
+      "hook-example-custom",
+      "hook-example-error",
+      "hook-example-test",
+      "hook-example-use-context",
+      "hook-example-use-effect",
+      "hook-example-use-memo",
+      "hook-example-use-reducer",
+      "hook-example-use-ref",
+      "hook-example-use-state"
+    ]
   }
 }

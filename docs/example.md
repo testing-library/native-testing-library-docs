@@ -7,7 +7,7 @@ sidebar_label: Example
 ```javascript
 import React from 'react';
 import { Button, Text, TextInput, View } from 'react-native';
-import { act, fireEvent, render, wait } from 'native-testing-library';
+import { fireEvent, render, wait } from 'native-testing-library';
 
 function Example() {
   const [name, setUser] = React.useState('');

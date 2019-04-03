@@ -38,7 +38,7 @@ const siteConfig = {
   //   organizationName: 'JoelMarcey'
 
   // For no header links in the top nav bar -> headerLinks: [],
-  headerLinks: [{ doc: 'intro', label: 'Docs' }],
+  headerLinks: [{ doc: 'intro', label: 'Docs' }, { doc: 'api-queries', label: 'API' }],
 
   // If you have users set above, you add it here:
   //  users,
@@ -46,7 +46,7 @@ const siteConfig = {
   /* path to images for header/footer */
   headerIcon: 'img/mascot-64x64.png',
   footerIcon: 'img/mascot-128x128.png',
-  favicon: 'img/mascot-32x32.png',
+  favicon: 'img/favicon.png',
 
   /* Colors for website */
   colors: {
