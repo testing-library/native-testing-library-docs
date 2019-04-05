@@ -4,7 +4,7 @@ title: Install
 sidebar_label: Install
 ---
 
-This module should be install as in your project's `devDependencies`:
+This module should be installed in your project's `devDependencies`:
 
 ```
 npm install --save-dev native-testing-library
