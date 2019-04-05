@@ -30,6 +30,9 @@
       "hook-example-use-reducer",
       "hook-example-use-ref",
       "hook-example-use-state"
+    ],
+    "Ecosystem": [
+      "ecosystem-jest-native"
     ]
   }
 }
