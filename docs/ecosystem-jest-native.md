@@ -4,7 +4,7 @@ title: jest-native
 sidebar_label: Jest Matchers
 ---
 
-[`jest-native`](https://github.com/gnapse/jest-native) is a companion library for
+[`jest-native`](https://github.com/bcarroll22/jest-native) is a companion library for
 `native-testing-library` that provides custom element matchers for Jest.
 
 ```
@@ -27,7 +27,7 @@ expect(getByText(rootInstance, 'Visible Example')).toBeVisible();
 > `queryByTestId`) rather than a get function (like `getByTestId`). Otherwise the `get*` function
 > could throw an error before your assertion.
 
-Check out [jest-native's documentation](https://github.com/gnapse/jest-native) for a full list of
-available matchers.
+Check out [jest-native's documentation](https://github.com/bcarroll22/jest-native) for a full list
+of available matchers.
 
-- [jest-native on GitHub](https://github.com/gnapse/jest-native)
+- [jest-native on GitHub](https://github.com/bcarroll22/jest-native)
