@@ -7,6 +7,9 @@
 
 const React = require('react');
 
+const ExternalLink = props => <a target="_blank" rel="noreferrer noopener" {...props} />;
+const Link = props => <a {...props} />;
+
 class Footer extends React.Component {
   docUrl(doc, language) {
     const baseUrl = this.props.config.baseUrl;
