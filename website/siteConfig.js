@@ -44,9 +44,9 @@ const siteConfig = {
   //  users,
 
   /* path to images for header/footer */
-  headerIcon: 'img/mascot-64x64.png',
-  footerIcon: 'img/mascot-128x128.png',
-  favicon: 'img/favicon.png',
+  headerIcon: 'img/whale-64x64.png',
+  footerIcon: 'img/whale-128x128.png',
+  favicon: 'img/whale-32x32.png',
 
   /* Colors for website */
   colors: {
@@ -87,8 +87,8 @@ const siteConfig = {
   cleanUrl: true,
 
   // Open Graph and Twitter card images.
-  ogImage: 'img/mascot-128x128.png',
-  twitterImage: 'img/mascot-128x128.png',
+  ogImage: 'img/whale-128x128.png',
+  twitterImage: 'img/whale-128x128.png',
 
   // Show documentation's last contributor's name.
   // enableUpdateBy: true,
