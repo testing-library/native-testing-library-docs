@@ -38,7 +38,7 @@ const siteConfig = {
   //   organizationName: 'JoelMarcey'
 
   // For no header links in the top nav bar -> headerLinks: [],
-  headerLinks: [{ doc: 'intro', label: 'Docs' }, { doc: 'api-queries', label: 'API' }],
+  headerLinks: [{ doc: 'intro', label: 'Docs' }, { doc: 'guide-queries', label: 'Recipes' }],
 
   // If you have users set above, you add it here:
   //  users,
@@ -100,6 +100,7 @@ const siteConfig = {
   // template. For example, if you need your repo's URL...
   repoUrl: 'https://github.com/bcarroll22/native-testing-library',
   docsRepoUrl: 'https://github.com/bcarroll2/native-testing-library-docs',
+  editUrl: 'https://github.com/bcarroll22/native-testing-library-docs/blob/master/docs/',
 
   algolia: {
     apiKey: 'e17df0b04917412fc03a6e92a2ca087e',
