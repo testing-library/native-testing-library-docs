@@ -3,6 +3,7 @@ id: api-queries
 title: Queries
 sidebar_label: Queries
 ---
+
 ## Variants
 
 > `getBy` queries are shown by default in the [query documentation](#queries) below.
@@ -52,6 +53,35 @@ See [TextMatch](#textmatch) for documentation on what can be passed to a query.
 
 ## Queries
 
+### `ByA11yHint`
+
+> getByA11yHint, queryByA11yHint, getAllByA11yHint, queryAllByA11yHint, findByA11yHint,
+> findAllByA11yHint
+
+```typescript
+getByA11yHint(
+  container: ReactTestInstance,
+  match: TextMatch,
+  options?: {
+    exact?: boolean = true,
+    trim?: boolean = true,
+    collapseWhitespace?: boolean = true,
+    filter?: FilterFn,
+    normalizer?: NormalizerFn,
+  }): FiberRoot
+```
+
+This will search for all elements with an `accessibilityHint` prop and find one that matches the
+given [`TextMatch`](#textmatch).
+
+```js
+import { render } from 'react-testing-library';
+
+const { getByA11yHint } = render(<View accessibilityHint="summary" />);
+
+getByA11yHint('summary'); // returns the View node
+```
+
 ### `ByA11yLabel`
 
 > getByA11yLabel, queryByLabelText, getAllByLabelText, queryAllByLabelText findByLabelText,
@@ -60,16 +90,18 @@ See [TextMatch](#textmatch) for documentation on what can be passed to a query.
 ```typescript
 getByA11yLabel(
   container: ReactTestInstance,
-  text: TextMatch,
+  match: TextMatch,
   options?: {
-    selector?: string = '*',
     exact?: boolean = true,
+    trim?: boolean = true,
+    collapseWhitespace?: boolean = true,
+    filter?: FilterFn,
     normalizer?: NormalizerFn,
   }): FiberRoot
 ```
 
-This will search for all elements with an `accessibilityLabel` attribute and find one that matches the given
-[`TextMatch`](#textmatch).
+This will search for all elements with an `accessibilityLabel` prop and find one that matches the
+given [`TextMatch`](#textmatch).
 
 ```js
 function Login({ onPress }) {
@@ -90,15 +122,15 @@ const { getByA11yLabel } = render(<Login onPress={jest.fn()} />);
 getByA11yLabel('username'); // returns the TextInput node
 ```
 
-### `ByPlaceholder`
+### `ByA11yRole`
 
-> getByPlaceholder, queryByPlaceholder, getAllByPlaceholder, queryAllByPlaceholder,
-> findByPlaceholder, findAllByPlaceholder
+> getByA11yRole, queryByA11yRole, getAllByA11yRole, queryAllByA11yRole, findByA11yRole,
+> findAllByA11yRole
 
 ```typescript
-getByPlaceholder(
+getByA11yRole(
   container: ReactTestInstance,
-  text: TextMatch,
+  match: TextMatch,
   options?: {
     exact?: boolean = true,
     trim?: boolean = true,
@@ -108,7 +140,82 @@ getByPlaceholder(
   }): FiberRoot
 ```
 
-This will search for all elements with a `placeholder` attribute and find one that matches the given
+This will search for all elements with an `accessibilityRole` prop and find one that matches the
+given [`TextMatch`](#textmatch).
+
+```js
+import { render } from 'react-testing-library';
+
+const { getByA11yRole } = render(<View accessibilityRole="summary" />);
+
+getByA11yRole('summary'); // returns the View node
+```
+
+### `ByA11yStates`
+
+> getByA11yStates, queryByA11yStates, getAllByA11yStates, queryAllByA11yStates, findByA11yStates,
+> findAllByA11yStates
+
+```typescript
+getByA11yStates(
+  container: ReactTestInstance,
+  match: Array<string>
+): FiberRoot
+```
+
+This will search for all elements with an `accessibilityStates` prop and find one that matches the
+given `Array`.
+
+```js
+import { render } from 'react-testing-library';
+
+const { getByA11yStates } = render(<View accessibilityStates={['disabled']} />);
+
+getByA11yStates(['disabled']); // returns the View node
+```
+
+### `ByA11yTraits`
+
+> getByA11yTraits, queryByA11yTraits, getAllByA11yTraits, queryAllByA11yTraits, findByA11yTraits,
+> findAllByA11yTraits
+
+```typescript
+getByA11yTraits(
+  container: ReactTestInstance,
+  match: Array<string>,
+): FiberRoot
+```
+
+This will search for all elements with an `accessibilityTraits` prop and find one that matches the
+given `Array`.
+
+```js
+import { render } from 'react-testing-library';
+
+const { getByA11yTraits } = render(<View accessibilityTraits={['button']} />);
+
+getByA11yTraits(['button']); // returns the View node
+```
+
+### `ByPlaceholder`
+
+> getByPlaceholder, queryByPlaceholder, getAllByPlaceholder, queryAllByPlaceholder,
+> findByPlaceholder, findAllByPlaceholder
+
+```typescript
+getByPlaceholder(
+  container: ReactTestInstance,
+  match: TextMatch,
+  options?: {
+    exact?: boolean = true,
+    trim?: boolean = true,
+    collapseWhitespace?: boolean = true,
+    filter?: FilterFn,
+    normalizer?: NormalizerFn,
+  }): FiberRoot
+```
+
+This will search for all elements with a `placeholder` prop and find one that matches the given
 [`TextMatch`](#textmatch).
 
 ```javascript
@@ -126,7 +233,7 @@ getByPlaceholder('Username'); // returns the TextInput node
 ```typescript
 getByText(
   container: ReactTestInstance,
-  text: TextMatch,
+  match: TextMatch,
   options?: {
     types?: array = ['Text', 'TextInput'],
     trim?: boolean = true,
@@ -137,7 +244,7 @@ getByText(
 ```
 
 This will search for all elements of type `Text` with `props.children` matching the given. It will
-also search `TextInput`s by their value [`TextMatch`](#textmatch).
+also search `TextInput` elements by their value [`TextMatch`](#textmatch).
 
 ```js
 import { render } from 'native-testing-library';
@@ -145,35 +252,6 @@ import { render } from 'native-testing-library';
 const { getByText } = render(<Text>About ℹ</Text>);
 
 getByText(/about/i); // returns the Text node
-```
-
-### `ByA11yRole`
-
-> getByA11yRole, queryByA11yRole, getAllByA11yRole, queryAllByA11yRole, findByA11yRole,
-> findAllByA11yRole
-
-```typescript
-getByA11yRole(
-  container: ReactTestInstance,
-  text: TextMatch,
-  options?: {
-    exact?: boolean = true,
-    trim?: boolean = true,
-    collapseWhitespace?: boolean = true,
-    filter?: FilterFn,
-    normalizer?: NormalizerFn,
-  }): FiberRoot
-```
-
-This will search for all elements with an `accessibilityRole` attribute and find one that matches the given
-[`TextMatch`](#textmatch).
-
-```js
-import { render } from 'react-testing-library';
-
-const { getByA11yRole } = render(<View accessibilityRole="summary" />);
-
-getByA11yRole('summary'); // returns the View node
 ```
 
 ### `ByValue`
@@ -183,7 +261,7 @@ getByA11yRole('summary'); // returns the View node
 ```typescript
 getByText(
   container: ReactTestInstance,
-  text: TextMatch,
+  match: TextMatch,
   options?: {
     exact?: boolean = true,
     trim?: boolean = true,
@@ -193,7 +271,7 @@ getByText(
   }): FiberRoot
 ```
 
-This will search for all elements with a `value` attribute and find one that matches the given
+This will search for all elements with a `value` prop and find one that matches the given
 [`TextMatch`](#textmatch).
 
 ```js
@@ -204,7 +282,6 @@ const { getByText } = render(<Text>About ℹ</Text>);
 getByText(/about/i); // returns the Text node
 ```
 
-
 ### `ByTestId`
 
 > getByTestId, queryByTestId, getAllByTestId, queryAllByTestId, findByTestId, findAllByTestId
@@ -212,7 +289,7 @@ getByText(/about/i); // returns the Text node
 ```typescript
 getByTestId(
   container: ReactTestInstance,
-  text: TextMatch,
+  match: TextMatch,
   options?: {
     trim?: boolean = true,
     collapseWhitespace?: boolean = true,
@@ -301,25 +378,25 @@ getByText(node, 'text', {
 Given the following render:
 
 ```javascript
-const {  rootInstance } = render(<Text>Hello World</Text>);
+const { baseElement } = render(<Text>Hello World</Text>);
 ```
 
 **_Will_ find a match:**
 
 ```javascript
 // Matching a string:
-getByText( rootInstance, 'Hello World'); // full string match
-getByText( rootInstance, 'llo Worl', { exact: false }); // substring match
-getByText( rootInstance, 'hello world', { exact: false }); // ignore case
+getByText(baseElement, 'Hello World'); // full string match
+getByText(baseElement, 'llo Worl', { exact: false }); // substring match
+getByText(baseElement, 'hello world', { exact: false }); // ignore case
 
 // Matching a regex:
-getByText( rootInstance, /World/); // substring match
-getByText( rootInstance, /world/i); // substring match, ignore case
-getByText( rootInstance, /^hello world$/i); // full string match, ignore case
-getByText( rootInstance, /Hello W?oRlD/i); // advanced regex
+getByText(baseElement, /World/); // substring match
+getByText(baseElement, /world/i); // substring match, ignore case
+getByText(baseElement, /^hello world$/i); // full string match, ignore case
+getByText(baseElement, /Hello W?oRlD/i); // advanced regex
 
 // Matching with a custom function:
-getByText( rootInstance, content => content.startsWith('Hello'));
+getByText(baseElement, content => content.startsWith('Hello'));
 ```
 
 **_Will not_ find a match:**

@@ -27,9 +27,9 @@ render(<View />);
 import { render } from 'native-testing-library';
 
 test('renders a message', () => {
-  const { container, getByText, rootInstance } = render(<Text>Hello, World!</Text>);
+  const { container, getByText, baseElement } = render(<Text>Hello, World!</Text>);
   expect(getByText('Hello, world!')).toBeTruthy();
-  expect(rootInstance).toMatchInlineSnapshot(`
+  expect(baseElement).toMatchInlineSnapshot(`
     <Text>Hello, World!</Text>
   `);
 });
@@ -61,10 +61,10 @@ const { getByRowColumn, getByText } = render(<MyTable />, {
 });
 ```
 
-See [helpers](../api-helpers.md) for guidance on using utility functions to create custom queries.
+See [helpers](api-helpers.md) for guidance on using utility functions to create custom queries.
 
 Custom queries can also be added globally by following the
-[custom render guide](./setup#custom-render).
+[custom render guide](setup.md#custom-render).
 
 ## `render` Result
 
@@ -73,7 +73,7 @@ The `render` method returns an object that has a few properties:
 ### `...queries`
 
 The most important feature of `render` is that the [default queries](api-queries.md) are
-automatically returned with their first argument bound to the `rootInstance`.
+automatically returned with their first argument bound to the `baseElement`.
 
 **Example**
 
@@ -89,7 +89,7 @@ The `ReactTestInstance` result from your render. This has helpful methods like `
 > You should rarely use the container. There are very few instances where you need to access the
 > container itself to do something you'd need to in a test.
 
-### `rootInstance`
+### `baseElement`
 
 This is the root element of your render result. By default, this is what all of your queries will be
 run on, and you could also use it to do any custom searching logic you wanted to. For instance, we

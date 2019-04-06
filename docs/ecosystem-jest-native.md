@@ -19,8 +19,8 @@ npm install --save-dev jest-native
   <Text testID="visible">Visible Example</Text>
 </View>;
 
-expect(queryByTestId(rootInstance, 'not-empty')).not.toBeEmpty();
-expect(getByText(rootInstance, 'Visible Example')).toBeVisible();
+expect(queryByTestId(baseElement, 'not-empty')).not.toBeEmpty();
+expect(getByText(baseElement, 'Visible Example')).toBeVisible();
 ```
 
 > Note: when using some of these matchers, you may need to make sure you use a query function (like

@@ -39,8 +39,8 @@ is what you can do in a case where you are **very** stuck and can't figure out w
 
 ```javascript
 // react-testing-library
-const { rootInstance } = render(<MyComponent />);
-const icons = rootInstance.findAll(node => node.props.name === 'menu');
+const { baseElement } = render(<MyComponent />);
+const icons = baseElement.findAll(node => node.props.name === 'menu');
 ```
 
 We cannot stress enough that we _do not_ recommend that you do this. Your results will be
@@ -75,7 +75,7 @@ You can't know what a library does with their props, and it certainly doesn't ma
 All they care about is that they see a material design icon. So, if you do:
 
 ```javascript
-rootInstance.find(({ props }) => props.name === 'menu');
+baseElement.find(({ props }) => props.name === 'menu');
 
 // => [MaterialIcon, Icon]
 ```
@@ -83,7 +83,7 @@ rootInstance.find(({ props }) => props.name === 'menu');
 This isn't right at all. Sure, you could do something like:
 
 ```javascript
-const icon = rootInstance.find(({ props }) => props.name === 'menu');
+const icon = baseElement.find(({ props }) => props.name === 'menu');
 
 icon[icon.length - 1];
 

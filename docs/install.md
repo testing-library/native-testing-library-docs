@@ -10,7 +10,7 @@ This module should be installed in your project's `devDependencies`:
 npm install --save-dev native-testing-library
 ```
 
-You will need `react` and `react-native` installed as *dependencies* in order to run this project.
+You will need `react` and `react-native` installed as _dependencies_ in order to run this project.
 
 ## Exports
 
