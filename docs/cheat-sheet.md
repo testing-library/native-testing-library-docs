@@ -1,15 +1,12 @@
 ---
 id: cheat-sheet
-title: Cheat Sheet
+title: Printable Cheat Sheet
 sidebar_label: Cheat Sheet
 ---
 
-## Printable Cheat Sheet
-
 There is a printable one-page cheat sheet available for you to download. It is intended to be a
-reference of the most commonly used functionality in `native-testing-library`, but is not a complete
-reference guide. Keep a copy of it on your desk to quickly take a peek at the most commonly used
-functionality for this library!
+quick reference for `native-testing-library`, but is not a complete API glossary or guide. Keep a
+copy of it on your desk to quickly take a peek at the most commonly used functionality!
 
 [Download the cheat sheet][cheatsheet]
 
