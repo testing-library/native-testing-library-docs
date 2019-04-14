@@ -1,6 +1,13 @@
 {
   "docs": {
-    "Getting started": ["intro", "install", "example", "setup", "guiding-principles"],
+    "Getting started": [
+      "intro",
+      "install",
+      "example",
+      "setup",
+      "guiding-principles",
+      "cheat-sheet"
+    ],
     "API": [
       "api-queries",
       "api-events",
@@ -10,12 +17,10 @@
       "api-render-hook",
       "api-act"
     ],
-    "Ecosystem": [
-      "ecosystem-jest-native"
-    ]
+    "Ecosystem": ["ecosystem-jest-native"]
   },
   "recipes": {
-    "Guides": ["guide-queries","guide-disappearance"],
+    "Guides": ["guide-queries", "guide-disappearance"],
     "Examples": [
       "example-context",
       "example-input-event",
