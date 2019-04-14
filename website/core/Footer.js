@@ -44,6 +44,13 @@ class Footer extends React.Component {
             <a href={this.docUrl('install')}>Install</a>
             <a href={this.docUrl('example')}>Example</a>
             <a href={this.docUrl('api-queries')}>API</a>
+            <a
+              href="https://github.com/bcarroll22/native-testing-library/blob/master/other/cheat-sheet.pdf"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              Cheat sheet
+            </a>
           </div>
           <div>
             <h5>Community</h5>
