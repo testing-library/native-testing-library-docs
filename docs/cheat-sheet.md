@@ -11,6 +11,6 @@ reference of the most commonly used functionality in `native-testing-library`, b
 reference guide. Keep a copy of it on your desk to quickly take a peek at the most commonly used
 functionality for this library!
 
-[Download or print the cheat sheet][cheatsheet]
+[Download the cheat sheet][cheatsheet]
 
 [cheatsheet]: https://github.com/bcarroll22/native-testing-library/raw/master/other/cheat-sheet.pdf
