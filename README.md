@@ -22,7 +22,7 @@
 [![downloads](https://img.shields.io/npm/dm/native-testing-library.svg?style=flat-square)](http://www.npmtrends.com/native-testing-library)
 [![MIT License](https://img.shields.io/npm/l/native-testing-library.svg?style=flat-square)](https://github.com/bcarroll22/native-testing-library/blob/master/LICENSE)
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![Code of Conduct](https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square)](https://github.com/bcarroll22/native-testing-library/blob/master/CODE_OF_CONDUCT.md)
 
