@@ -11,15 +11,14 @@ how your apps are used.
 
 Utilities are included in this project based on the following guiding principles:
 
-1.  Rendering React Native components ultimately creates native views, and those views should be
-    what you test rather than the React component instances you rendered to make them.
-2.  In general, test the way your users use your app. There are instances where you'll need to write
-    unit tests, but try your best to write with this first -- the more your tests resemble the way
-    your app works, the more confident you'll be with your app.
-3.  Be responsible, and remember that testing exists to serve you, not the other way around. If the
-    library isn't working for you, contribute to make it work or do something more intuitive. Make
-    your tests work for you and your team!
+1.  If it relates to rendering components, it deals with native views rather than component
+    instances, nor should it encourage dealing with component instances.
+2.  It should be generally useful for testing the application components in the way the user would
+    use it. We are making some trade-offs here because we're using a computer and often a simulated
+    environment, but in general, utilities should encourage tests that use the components the way
+    they're intended to be used.
+3.  Utility implementations and APIs should be simple and flexible.
 
-In summary, we believe in the principles of `dom-testing-library` and its companion libraries, and
-try to adhere to them as closely as possible. Changes to this library should always consider how
-they relate to what's happening in the other libraries in this family of tools.
+In summary, we believe in the principles of `testing-library`, and adhere to them as closely as
+possible. At the end of the day, what we want is for this library to be pretty light-weight, simple,
+and understandable.
