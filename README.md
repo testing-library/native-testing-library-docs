@@ -1,5 +1,4 @@
 <div align="center">
-[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors)
   <h1>(React) Native Testing Library Docs</h1>
   
   <a href="https://www.joypixels.com/emoji/1f433">
@@ -21,8 +20,11 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/bb4911c5-74b1-48b4-aea8-3d317cec4761/deploy-status)](https://app.netlify.com/sites/native-testing-library/deploys)
 [![version](https://img.shields.io/npm/v/native-testing-library.svg?style=flat-square)](https://www.npmjs.com/package/native-testing-library)
 [![downloads](https://img.shields.io/npm/dm/native-testing-library.svg?style=flat-square)](http://www.npmtrends.com/native-testing-library)
-[![MIT License](https://img.shields.io/npm/l/native-testing-library-docs.svg?style=flat-square)](https://github.com/bcarroll22/native-testing-library-docs/blob/master/LICENSE)
+[![MIT License](https://img.shields.io/npm/l/native-testing-library.svg?style=flat-square)](https://github.com/bcarroll22/native-testing-library/blob/master/LICENSE)
+
+[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![Code of Conduct](https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square)](https://github.com/bcarroll22/native-testing-library/blob/master/CODE_OF_CONDUCT.md)
 
 [![Watch on GitHub](https://img.shields.io/github/watchers/bcarroll22/native-testing-library-docs.svg?style=social)](https://github.com/bcarroll22/native-testing-library-docs/watchers)
 [![Star on GitHub](https://img.shields.io/github/stars/bcarroll22/native-testing-library-docs.svg?style=social)](https://github.com/bcarroll22/native-testing-library-docs/stargazers)
