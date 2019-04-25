@@ -11,7 +11,7 @@ sidebar_label: Queries
 ### getBy
 
 `getBy*` queries returns the first matching node for a query, and throws an error if no elements
-match.
+match or if more than one match is found (use `getAllBy` instead).
 
 ### getAllBy
 
@@ -21,7 +21,8 @@ elements match.
 ### queryBy
 
 `queryBy*` queries returns the first matching node for a query, and return `null` if no elements
-match. This is useful for asserting an element is not present.
+match. This is useful for asserting an element is not present. This throws if more than one match is
+found (use `queryAllBy` instead)..
 
 ### queryAllBy
 
@@ -31,7 +32,8 @@ match. This is useful for asserting an element is not present.
 ### findBy
 
 `findBy*` queries return a promise which resolves when an element is found which matches the given
-query. The promise is rejected if no element is found after a default timeout of `4500`ms.
+query. The promise is rejected if no element is found or if more than one element is found after a
+default timeout of `4500`ms. If you need to find more than one element, then use `findAllBy`.
 
 > Note, this is a simple combination of `getBy*` queries and
 > [`waitForElement`](/docs/api-async#waitforelement). The `findBy*` queries accept the
