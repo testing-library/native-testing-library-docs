@@ -259,7 +259,7 @@ getByText(/about/i); // returns the Text node
 > getByValue, queryByValue, getAllByValue, queryAllByValue, findByValue, findAllByValue
 
 ```typescript
-getByText(
+getByValue(
   container: ReactTestInstance,
   match: TextMatch,
   options?: {
@@ -268,7 +268,7 @@ getByText(
     collapseWhitespace?: boolean = true,
     filter?: FilterFn,
     normalizer?: NormalizerFn,
-  }): FiberRoot
+  }): NormalizerOptions
 ```
 
 This will search for all elements with a `value` prop and find one that matches the given
@@ -277,9 +277,9 @@ This will search for all elements with a `value` prop and find one that matches 
 ```js
 import { render } from 'native-testing-library';
 
-const { getByText } = render(<Text>About ℹ</Text>);
+const { getByValue } = render(<Input value="About ℹ" onChangeText={() => ({})} />);
 
-getByText(/about/i); // returns the Text node
+getByValue(/about/i); // returns the Input node
 ```
 
 ### `ByTestId`
