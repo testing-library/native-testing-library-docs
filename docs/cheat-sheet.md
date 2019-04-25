@@ -10,4 +10,4 @@ copy of it on your desk to quickly take a peek at the most commonly used functio
 
 [Download the cheat sheet][cheatsheet]
 
-[cheatsheet]: https://github.com/bcarroll22/native-testing-library/raw/master/other/cheat-sheet.pdf
+[cheatsheet]: https://github.com/testing-library/native-testing-library/raw/master/other/cheat-sheet.pdf
