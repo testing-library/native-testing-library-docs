@@ -32,7 +32,7 @@ const siteConfig = {
 
   // Used for publishing and more
   projectName: 'native-testing-library-docs',
-  organizationName: 'bcarroll22',
+  organizationName: 'testing-library',
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
   //   organizationName: 'JoelMarcey'
@@ -98,9 +98,9 @@ const siteConfig = {
 
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...
-  repoUrl: 'https://github.com/bcarroll22/native-testing-library',
+  repoUrl: 'https://github.com/testing-library/native-testing-library',
   docsRepoUrl: 'https://github.com/bcarroll2/native-testing-library-docs',
-  editUrl: 'https://github.com/bcarroll22/native-testing-library-docs/blob/master/docs/',
+  editUrl: 'https://github.com/testing-library/native-testing-library-docs/blob/master/docs/',
 
   algolia: {
     apiKey: 'e17df0b04917412fc03a6e92a2ca087e',
