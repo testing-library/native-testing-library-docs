@@ -15,7 +15,7 @@ function render(
 ): RenderResult;
 ```
 
-Render into a ReactTestInstance container.
+Create a `ReactTestRenderer Instance`.
 
 ```jsx
 import { render } from 'native-testing-library';
@@ -27,9 +27,9 @@ render(<View />);
 import { render } from 'native-testing-library';
 
 test('renders a message', () => {
-  const { container, getByText, baseElement } = render(<Text>Hello, World!</Text>);
+  const { container, getByText } = render(<Text>Hello, World!</Text>);
   expect(getByText('Hello, world!')).toBeTruthy();
-  expect(baseElement).toMatchInlineSnapshot(`
+  expect(container.toJSON()).toMatchInlineSnapshot(`
     <Text>Hello, World!</Text>
   `);
 });
@@ -83,8 +83,8 @@ const { getByText, getByTestId /* etc */ } = render(<Component />);
 
 ### `container`
 
-The `ReactTestInstance` result from your render. This has helpful methods like `toTree()` and
-`toJSON()`.
+The `ReactTestRendererInstance` result from your render. This has helpful methods like `toTree()`
+and `toJSON()`.
 
 > You should rarely use the container. There are very few instances where you need to access the
 > container itself to do something you'd need to in a test.
@@ -92,13 +92,11 @@ The `ReactTestInstance` result from your render. This has helpful methods like `
 ### `baseElement`
 
 This is the root element of your render result. By default, this is what all of your queries will be
-run on, and you could also use it to do any custom searching logic you wanted to. For instance, we
-highly discourage you and your team do so, but this is a valid `ReactTestRenderer` instance and any
-methods from that library will work on this property.
+run on, and you could also use it to do any custom searching logic you wanted to..
 
 ### `debug`
 
-This method is a shortcut for `console.log(prettyPrint(baseElement))`.
+This method is a shortcut for `console.log(prettyPrint(container.toJSON()))`.
 
 ```javascript
 import { render } from 'native-testing-library';

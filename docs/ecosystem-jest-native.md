@@ -1,6 +1,6 @@
 ---
 id: ecosystem-jest-native
-title: jest-native
+title: Jest Matchers
 sidebar_label: Jest Matchers
 ---
 
@@ -27,7 +27,7 @@ expect(getByText(baseElement, 'Visible Example')).toBeVisible();
 > `queryByTestId`) rather than a get function (like `getByTestId`). Otherwise the `get*` function
 > could throw an error before your assertion.
 
-Check out [jest-native's documentation](https://github.com/testing-library/jest-native) for a full list
-of available matchers.
+Check out [jest-native's documentation](https://github.com/testing-library/jest-native) for a full
+list of available matchers.
 
 - [jest-native on GitHub](https://github.com/testing-library/jest-native)

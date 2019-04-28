@@ -4,6 +4,29 @@ title: Queries
 sidebar_label: Queries
 ---
 
+## Using queries
+
+All queries are exported directly from the entry point, but you likely won't need to use them that
+way in most cases. For instance, you can do the following:
+
+```javascript
+import { getByText } from 'native-testing-library';
+
+getByText(container, 'hello world');
+```
+
+but you likely won't need to. Most queries you will run are on the result of render. You can use
+those in this way:
+
+```javascript
+const { getByText } = render(<Text>hello world</Text>);
+
+getByText('hello world');
+```
+
+This page is written in the format of the first example because it is documentation for the query
+API, not documentation for the render result.
+
 ## Variants
 
 > `getBy` queries are shown by default in the [query documentation](#queries) below.
@@ -62,7 +85,7 @@ See [TextMatch](#textmatch) for documentation on what can be passed to a query.
 
 ```typescript
 getByA11yHint(
-  container: ReactTestInstance,
+  container: ReactTestRendererInstance,
   match: TextMatch,
   options?: {
     exact?: boolean = true,
@@ -91,7 +114,7 @@ getByA11yHint('summary'); // returns the View node
 
 ```typescript
 getByA11yLabel(
-  container: ReactTestInstance,
+  container: ReactTestRendererInstance,
   match: TextMatch,
   options?: {
     exact?: boolean = true,
@@ -131,7 +154,7 @@ getByA11yLabel('username'); // returns the TextInput node
 
 ```typescript
 getByA11yRole(
-  container: ReactTestInstance,
+  container: ReactTestRendererInstance,
   match: TextMatch,
   options?: {
     exact?: boolean = true,
@@ -160,7 +183,7 @@ getByA11yRole('summary'); // returns the View node
 
 ```typescript
 getByA11yStates(
-  container: ReactTestInstance,
+  container: ReactTestRendererInstance,
   match: Array<string>
 ): FiberRoot
 ```
@@ -183,7 +206,7 @@ getByA11yStates(['disabled']); // returns the View node
 
 ```typescript
 getByA11yTraits(
-  container: ReactTestInstance,
+  container: ReactTestRendererInstance,
   match: Array<string>,
 ): FiberRoot
 ```
@@ -206,7 +229,7 @@ getByA11yTraits(['button']); // returns the View node
 
 ```typescript
 getByPlaceholder(
-  container: ReactTestInstance,
+  container: ReactTestRendererInstance,
   match: TextMatch,
   options?: {
     exact?: boolean = true,
@@ -234,10 +257,9 @@ getByPlaceholder('Username'); // returns the TextInput node
 
 ```typescript
 getByText(
-  container: ReactTestInstance,
+  container: ReactTestRendererInstance,
   match: TextMatch,
   options?: {
-    types?: array = ['Text', 'TextInput'],
     trim?: boolean = true,
     collapseWhitespace?: boolean = true,
     exact?: boolean = true,
@@ -256,13 +278,40 @@ const { getByText } = render(<Text>About ℹ</Text>);
 getByText(/about/i); // returns the Text node
 ```
 
+### `ByTitle`
+
+> getByTitle, queryByTitle, getAllByTitle, queryAllByTitle, findByTitle, findAllByTitle
+
+```typescript
+getByTitle(
+  container: ReactTestRendererInstance,
+  match: TextMatch,
+  options?: {
+    trim?: boolean = true,
+    collapseWhitespace?: boolean = true,
+    exact?: boolean = true,
+    normalizer?: NormalizerFn,
+  }): FiberRoot
+```
+
+This will search for all elements with `props.title` matching the given by their value
+[`TextMatch`](#textmatch).
+
+```js
+import { render } from 'native-testing-library';
+
+const { getByTitle } = render(<Button title="About" />);
+
+getByTitle(/about/i); // returns the Button node
+```
+
 ### `ByValue`
 
 > getByValue, queryByValue, getAllByValue, queryAllByValue, findByValue, findAllByValue
 
 ```typescript
 getByValue(
-  container: ReactTestInstance,
+  container: ReactTestRendererInstance,
   match: TextMatch,
   options?: {
     exact?: boolean = true,
@@ -290,7 +339,7 @@ getByValue(/about/i); // returns the Input node
 
 ```typescript
 getByTestId(
-  container: ReactTestInstance,
+  container: ReactTestRendererInstance,
   match: TextMatch,
   options?: {
     trim?: boolean = true,

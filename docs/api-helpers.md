@@ -6,13 +6,13 @@ sidebar_label: Helpers
 
 ## Custom Queries
 
-`native-testing-library` exposes many of the helper functions that are used to implement the default
+`native-testing-library` exposes some of the helper functions that are used to implement the default
 queries. You can use the helpers to build custom queries. For example, the code below shows a way to
 query your TestInstance by a `style` prop. Note: test files would need to now import `test-utils.js`
 instead of using `native-testing-library` directly. Also note, please never actually implement this
 helper, it's just an example of what's possible.
 
-```js
+```javascript
 // test-utils.js
 import * as nativeTestingLib from 'native-testing-library';
 
@@ -54,10 +54,10 @@ export {
 getNodeText(node: React.ReactElement<any>)
 ```
 
-Returns the complete text content of a html element, removing any extra whitespace, and joining
-children that are an array. The intention is to treat text in nodes exactly as how it is perceived
-by users in a browser, where any extra whitespace within words in the html code is not meaningful
-when the text is rendered, and all text appears as one cohesive string regardless of the code.
+Returns the complete text content of an element, removing any extra whitespace, and joining children
+that are an array. The intention is to treat text in nodes exactly as how it is perceived by users
+in a browser, where any extra whitespace within words in the html code is not meaningful when the
+text is rendered, and all text appears as one cohesive string regardless of the code.
 
 ```javascript
 const inputNode = <TextInput value="words" />;
@@ -85,30 +85,30 @@ const inputNode = <TextInput value="words" />;
 getNodeText(inputNode); // "words"
 ```
 
-## `getQueriesForElement` APIs
+## `within` and ``getQueriesForElement` APIs
 
-`getQueriesForElement` takes a FiberRoot and binds it to the raw query functions, allowing them to
-be used without specifying a container.
+`within` (an alias to `getQueriesForElement`) takes a `ReactTestRendererInstance` and binds it to
+the raw query functions, allowing them to be used without manually specifying a container.
 
 Example: To get the username input of a login form within a `<LoginModal />`, you could do:
 
 ```js
-import { render, getQueriesForElement } from 'react-testing-library';
+import { render, within } from 'native-testing-library';
 
 const { getByA11yLabel } = render(<LoginModal />);
 const loginForm = getByA11yLabel('login-form');
 
-getQueriesForElement(loginForm).getByPlaceholder('Username');
+within(loginForm).getByPlaceholder('Username');
 ```
 
 ## Debugging
 
-When you use any `get` calls in your test cases, the current state of the `container` (React tree)
-gets printed on the console. For example:
+When you use any `get` calls in your test cases, the current contents of the `baseElement` get
+printed on the console. For example:
 
 ```javascript
 // <Text>Hello world</Text>
-getByText(container, 'Goodbye world'); // will fail by throwing error
+getByText('Goodbye world'); // will fail by throwing error
 ```
 
 The above test case will fail, however it prints the state of your React tree being tested, so you

@@ -14,8 +14,8 @@ tests if they work the way your users do. With that in mind, we recommend this o
       yourself why.
    1. [`getByPlaceholder`](api-queries#byplaceholder): Great for targeting a `TextInput` element to
       verify its content
-   1. [`getByText`](api-queries#bytext): Great for finding a `Button` or `Touchable` to fire an
-      event on
+   1. [`getByText`](api-queries#bytext): Great for finding a `Text` or `Touchable` nodes
+   1. [`getByTitle`](api-queries#bytitle): Useful for finding a `Button` to fire an event on
    1. [`getByValue`](api-queries#byvalue): The user can see the value they type into a `TextInput`
       or a checked `CheckBox` so this one is safe to use
 1. **Queries Users Can Infer**

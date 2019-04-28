@@ -41,7 +41,6 @@ class Footer extends React.Component {
           <div>
             <h5>Docs</h5>
             <a href={this.docUrl('intro')}>Getting Started</a>
-            <a href={this.docUrl('install')}>Install</a>
             <a href={this.docUrl('example')}>Example</a>
             <a href={this.docUrl('api-queries')}>API</a>
             <a
@@ -62,9 +61,10 @@ class Footer extends React.Component {
               Stack Overflow
             </a>
             <a href="https://reactiflux.com/">Reactiflux on Discord</a>
-            <a href="https://twitter.com/bcarroll22" target="_blank" rel="noreferrer noopener">
+            <a href="https://twitter.com/TestingLib" target="_blank" rel="noreferrer noopener">
               Follow on Twitter
             </a>
+            <a href="https://spectrum.chat/testing-library/help-react-native?tab=posts">Spectrum</a>
           </div>
           <div>
             <h5>More</h5>
@@ -80,7 +80,9 @@ class Footer extends React.Component {
               Star
             </a>
             <a href="https://github.com/testing-library/native-testing-library">GitHub</a>
-            <a href="https://github.com/testing-library/native-testing-library-docs">Edit the docs</a>
+            <a href="https://github.com/testing-library/native-testing-library-docs">
+              Edit the docs
+            </a>
           </div>
         </section>
         <section className="copyright">{this.props.config.copyright}</section>

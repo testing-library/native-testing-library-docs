@@ -21,5 +21,5 @@ import { render } from 'native-testing-library';
 ```
 
 The library's tests run in Node 8-11 before all new versions are published, and all files are
-processed through Babel. Typings are not provided, although we would be happy to accept a PR to add
-them! ☺️
+processed through Babel. Typings are provided, but may not be perfect, and we are happy to accept
+PRs to improve them! ☺️

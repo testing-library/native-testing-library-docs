@@ -6,13 +6,14 @@ sidebar_label: Setup
 
 ## Setting up your project
 
-`native-testing-library` should work out of the box for simple tests. Most of the snippets you'll
-find throughout the website should work without any additional configuration assuming you're using
-Jest and a moderately recent version of React Native.
+The `native-testing-library` API should work out of the box for most tests. All of the snippets
+you'll find throughout the website work without any additional configuration assuming you use Jest
+and a moderately recent version of React Native.
 
-We do strongly encourage you to use Jest with the `react-native` preset. In addition, there may be
-some additional mocks you would want to provide to allow for a smoother testing experience, (for
-example mocks for `react-native-gesture-handler`).
+We strongly encourage you to use Jest with the `native-testing-library` preset. The `react-native`
+preset should also work, but you'll be getting the best experience when using our preset. There may
+be some additional mocks you need to provide to such as mocks for `react-native-gesture-handler`
+when using `react-navigation`.
 
 ## Custom Render
 
@@ -23,8 +24,8 @@ file that re-exports everything from `native-testing-library`. You can replace
 [below](#configuring-jest-with-test-utils) for a way to make your test util file accessible without
 using relative paths.
 
-The example below sets up data providers using the [`wrapper`](api-render.md#render-options) option to
-`render`.
+The example below sets up data providers using the [`wrapper`](api-render.md#render-options) option
+to `render`.
 
 ```diff
 // my-component.test.js

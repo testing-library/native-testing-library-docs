@@ -20,8 +20,8 @@ fireEvent[eventName](node: FiberRoot, eventProperties: NativeEvent)
 ```
 
 Convenience methods for firing events. Check out
-[src/events.js](https://github.com/testing-library/native-testing-library/blob/master/src/events.js) for
-a full list as well as `validTargets` for every event type.
+[src/events.js](https://github.com/testing-library/native-testing-library/blob/master/src/events.js)
+for a full list as well as `validTargets` for every event type.
 
 ```javascript
 import { fireEvent, render } from 'native-testing-library';
