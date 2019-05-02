@@ -85,7 +85,7 @@ const inputNode = <TextInput value="words" />;
 getNodeText(inputNode); // "words"
 ```
 
-## `within` and ``getQueriesForElement` APIs
+## `within` and `getQueriesForElement` APIs
 
 `within` (an alias to `getQueriesForElement`) takes a `ReactTestRendererInstance` and binds it to
 the raw query functions, allowing them to be used without manually specifying a container.

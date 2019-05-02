@@ -78,22 +78,22 @@ See [TextMatch](#textmatch) for documentation on what can be passed to a query.
 
 ## Queries
 
-### `ByA11yHint`
+### `ByHintText`
 
-> getByA11yHint, queryByA11yHint, getAllByA11yHint, queryAllByA11yHint, findByA11yHint,
-> findAllByA11yHint
+> getByHintText, queryByHintText, getAllByHintText, queryAllByHintText, findByHintText,
+> findAllByHintText
 
 ```typescript
-getByA11yHint(
-  container: ReactTestRendererInstance,
+getByHintText(
+  testRenderer: ReactTestRendererInstance,
   match: TextMatch,
   options?: {
     exact?: boolean = true,
     trim?: boolean = true,
     collapseWhitespace?: boolean = true,
-    filter?: FilterFn,
+    selector?: SelectorFn,
     normalizer?: NormalizerFn,
-  }): FiberRoot
+  }): NativeTestInstance
 ```
 
 This will search for all elements with an `accessibilityHint` prop and find one that matches the
@@ -102,27 +102,27 @@ given [`TextMatch`](#textmatch).
 ```js
 import { render } from 'react-testing-library';
 
-const { getByA11yHint } = render(<View accessibilityHint="summary" />);
+const { getByHintText } = render(<View accessibilityHint="summary" />);
 
-getByA11yHint('summary'); // returns the View node
+getByHintText('summary'); // returns the View node
 ```
 
-### `ByA11yLabel`
+### `ByLabelText`
 
-> getByA11yLabel, queryByLabelText, getAllByLabelText, queryAllByLabelText findByLabelText,
+> getByLabelText, queryByLabelText, getAllByLabelText, queryAllByLabelText findByLabelText,
 > findAllByLabelText
 
 ```typescript
-getByA11yLabel(
-  container: ReactTestRendererInstance,
+getByLabelText(
+  testRenderer: ReactTestRendererInstance,
   match: TextMatch,
   options?: {
     exact?: boolean = true,
     trim?: boolean = true,
     collapseWhitespace?: boolean = true,
-    filter?: FilterFn,
+    selector?: SelectorFn,
     normalizer?: NormalizerFn,
-  }): FiberRoot
+  }): NativeTestInstance
 ```
 
 This will search for all elements with an `accessibilityLabel` prop and find one that matches the
@@ -142,27 +142,22 @@ function Login({ onPress }) {
 
 import { render } from 'native-testing-library';
 
-const { getByA11yLabel } = render(<Login onPress={jest.fn()} />);
+const { getByLabelText } = render(<Login onPress={jest.fn()} />);
 
-getByA11yLabel('username'); // returns the TextInput node
+getByLabelText('username'); // returns the TextInput node
 ```
 
-### `ByA11yRole`
+### `ByRole`
 
-> getByA11yRole, queryByA11yRole, getAllByA11yRole, queryAllByA11yRole, findByA11yRole,
-> findAllByA11yRole
+> getByRole, queryByRole, getAllByRole, queryAllByRole, findByRole, findAllByRole
 
 ```typescript
-getByA11yRole(
-  container: ReactTestRendererInstance,
+getByRole(
+  testRenderer: ReactTestRendererInstance,
   match: TextMatch,
   options?: {
-    exact?: boolean = true,
-    trim?: boolean = true,
-    collapseWhitespace?: boolean = true,
-    filter?: FilterFn,
-    normalizer?: NormalizerFn,
-  }): FiberRoot
+    selector?: SelectorFn,
+  }): NativeTestInstance
 ```
 
 This will search for all elements with an `accessibilityRole` prop and find one that matches the
@@ -171,73 +166,30 @@ given [`TextMatch`](#textmatch).
 ```js
 import { render } from 'react-testing-library';
 
-const { getByA11yRole } = render(<View accessibilityRole="summary" />);
+const { getByRole } = render(<View accessibilityRole="summary" />);
 
-getByA11yRole('summary'); // returns the View node
+getByRole('summary'); // returns the View node
 ```
 
-### `ByA11yStates`
+> `ByRole` queries will fall back to searching for elements with an `accessibilityTraits` match, but
+> they will log a warning on all matches that this prop is being deprecated by react-native.
 
-> getByA11yStates, queryByA11yStates, getAllByA11yStates, queryAllByA11yStates, findByA11yStates,
-> findAllByA11yStates
+### `ByPlaceholderText`
+
+> getByPlaceholderText, queryByPlaceholderText, getAllByPlaceholderText, queryAllByPlaceholderText,
+> findByPlaceholderText, findAllByPlaceholderText
 
 ```typescript
-getByA11yStates(
-  container: ReactTestRendererInstance,
-  match: Array<string>
-): FiberRoot
-```
-
-This will search for all elements with an `accessibilityStates` prop and find one that matches the
-given `Array`.
-
-```js
-import { render } from 'react-testing-library';
-
-const { getByA11yStates } = render(<View accessibilityStates={['disabled']} />);
-
-getByA11yStates(['disabled']); // returns the View node
-```
-
-### `ByA11yTraits`
-
-> getByA11yTraits, queryByA11yTraits, getAllByA11yTraits, queryAllByA11yTraits, findByA11yTraits,
-> findAllByA11yTraits
-
-```typescript
-getByA11yTraits(
-  container: ReactTestRendererInstance,
-  match: Array<string>,
-): FiberRoot
-```
-
-This will search for all elements with an `accessibilityTraits` prop and find one that matches the
-given `Array`.
-
-```js
-import { render } from 'react-testing-library';
-
-const { getByA11yTraits } = render(<View accessibilityTraits={['button']} />);
-
-getByA11yTraits(['button']); // returns the View node
-```
-
-### `ByPlaceholder`
-
-> getByPlaceholder, queryByPlaceholder, getAllByPlaceholder, queryAllByPlaceholder,
-> findByPlaceholder, findAllByPlaceholder
-
-```typescript
-getByPlaceholder(
-  container: ReactTestRendererInstance,
+getByPlaceholderText(
+  testRenderer: ReactTestRendererInstance,
   match: TextMatch,
   options?: {
     exact?: boolean = true,
     trim?: boolean = true,
     collapseWhitespace?: boolean = true,
-    filter?: FilterFn,
+    selector?: SelectorFn,
     normalizer?: NormalizerFn,
-  }): FiberRoot
+  }): NativeTestInstance
 ```
 
 This will search for all elements with a `placeholder` prop and find one that matches the given
@@ -246,9 +198,9 @@ This will search for all elements with a `placeholder` prop and find one that ma
 ```javascript
 import { render } from 'native-testing-library';
 
-const { getByPlaceholder } = render(<TextInput placeholder="Username" />);
+const { getByPlaceholderText } = render(<TextInput placeholder="Username" />);
 
-getByPlaceholder('Username'); // returns the TextInput node
+getByPlaceholderText('Username'); // returns the TextInput node
 ```
 
 ### `ByText`
@@ -257,18 +209,20 @@ getByPlaceholder('Username'); // returns the TextInput node
 
 ```typescript
 getByText(
-  container: ReactTestRendererInstance,
+  testRenderer: ReactTestRendererInstance,
   match: TextMatch,
   options?: {
+    exact?: boolean = true,
     trim?: boolean = true,
     collapseWhitespace?: boolean = true,
-    exact?: boolean = true,
+    selector?: SelectorFn,
     normalizer?: NormalizerFn,
-  }): FiberRoot
+  }): NativeTestInstance
 ```
 
 This will search for all elements of type `Text` with `props.children` matching the given. It will
-also search `TextInput` elements by their value [`TextMatch`](#textmatch).
+also search `TextInput` elements by their value and `Button` elements by their `title`
+[`TextMatch`](#textmatch).
 
 ```js
 import { render } from 'native-testing-library';
@@ -284,18 +238,19 @@ getByText(/about/i); // returns the Text node
 
 ```typescript
 getByTitle(
-  container: ReactTestRendererInstance,
+  testRenderer: ReactTestRendererInstance,
   match: TextMatch,
   options?: {
+    exact?: boolean = true,
     trim?: boolean = true,
     collapseWhitespace?: boolean = true,
-    exact?: boolean = true,
+    selector?: SelectorFn,
     normalizer?: NormalizerFn,
-  }): FiberRoot
+  }): NativeTestInstance
 ```
 
-This will search for all elements with `props.title` matching the given by their value
-[`TextMatch`](#textmatch).
+This will search for all `Button` or `RefreshControl` elements with `props.title` matching the given
+by their value [`TextMatch`](#textmatch).
 
 ```js
 import { render } from 'native-testing-library';
@@ -311,19 +266,19 @@ getByTitle(/about/i); // returns the Button node
 
 ```typescript
 getByValue(
-  container: ReactTestRendererInstance,
+  testRenderer: ReactTestRendererInstance,
   match: TextMatch,
   options?: {
     exact?: boolean = true,
     trim?: boolean = true,
     collapseWhitespace?: boolean = true,
-    filter?: FilterFn,
+    selector?: SelectorFn,
     normalizer?: NormalizerFn,
   }): NormalizerOptions
 ```
 
-This will search for all elements with a `value` prop and find one that matches the given
-[`TextMatch`](#textmatch).
+This will search for all `TextInput` elements with a `value` prop or `Picker` elements with a
+`selectedValue` prop and find ones that matches the given [`TextMatch`](#textmatch).
 
 ```js
 import { render } from 'native-testing-library';
@@ -339,15 +294,15 @@ getByValue(/about/i); // returns the Input node
 
 ```typescript
 getByTestId(
-  container: ReactTestRendererInstance,
+  testRenderer: ReactTestRendererInstance,
   match: TextMatch,
   options?: {
     trim?: boolean = true,
     collapseWhitespace?: boolean = true,
     exact?: boolean = true,
-    filter?: FilterFn,
+    selector?: SelectorFn,
     normalizer?: NormalizerFn,
-  }): FiberRoot
+  }): NativeTestInstance
 ```
 
 This will search for all elements with a `testID` and find one that matches the given
