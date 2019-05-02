@@ -80,7 +80,9 @@ class Footer extends React.Component {
               Star
             </a>
             <a href="https://github.com/testing-library/native-testing-library">GitHub</a>
-            <a href="https://github.com/testing-library/native-testing-library-docs">Edit the docs</a>
+            <a href="https://github.com/testing-library/native-testing-library-docs">
+              Edit the docs
+            </a>
           </div>
         </section>
         <section className="copyright">{this.props.config.copyright}</section>

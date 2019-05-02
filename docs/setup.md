@@ -23,8 +23,8 @@ file that re-exports everything from `native-testing-library`. You can replace
 [below](#configuring-jest-with-test-utils) for a way to make your test util file accessible without
 using relative paths.
 
-The example below sets up data providers using the [`wrapper`](api-render.md#render-options) option to
-`render`.
+The example below sets up data providers using the [`wrapper`](api-render.md#render-options) option
+to `render`.
 
 ```diff
 // my-component.test.js
