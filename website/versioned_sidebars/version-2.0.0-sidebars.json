@@ -1,0 +1,50 @@
+{
+  "version-2.0.0-docs": {
+    "Getting started": [
+      "version-2.0.0-intro",
+      "version-2.0.0-install",
+      "version-2.0.0-example",
+      "version-2.0.0-setup",
+      "version-2.0.0-guiding-principles",
+      "version-2.0.0-cheat-sheet"
+    ],
+    "API": [
+      "version-2.0.0-api-queries",
+      "version-2.0.0-api-events",
+      "version-2.0.0-api-async",
+      "version-2.0.0-api-helpers",
+      "version-2.0.0-api-render",
+      "version-2.0.0-api-render-hook",
+      "version-2.0.0-api-act"
+    ],
+    "Ecosystem": [
+      "version-2.0.0-ecosystem-jest-native"
+    ]
+  },
+  "version-2.0.0-recipes": {
+    "Guides": [
+      "version-2.0.0-guide-queries",
+      "version-2.0.0-guide-disappearance"
+    ],
+    "Examples": [
+      "version-2.0.0-example-context",
+      "version-2.0.0-example-input-event",
+      "version-2.0.0-example-intl",
+      "version-2.0.0-example-navigation",
+      "version-2.0.0-example-redux",
+      "version-2.0.0-example-update-props"
+    ],
+    "Hook Examples": [
+      "version-2.0.0-hook-example-async",
+      "version-2.0.0-hook-example-custom",
+      "version-2.0.0-hook-example-error",
+      "version-2.0.0-hook-example-test",
+      "version-2.0.0-hook-example-use-context",
+      "version-2.0.0-hook-example-use-effect",
+      "version-2.0.0-hook-example-use-memo",
+      "version-2.0.0-hook-example-use-reducer",
+      "version-2.0.0-hook-example-use-ref",
+      "version-2.0.0-hook-example-use-state"
+    ]
+  }
+}
