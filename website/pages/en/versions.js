@@ -33,10 +33,12 @@ function Versions(props) {
               <tr>
                 <th>{latestVersion}</th>
                 <td>
-                  <a href="">Documentation</a>
+                  <a href="/docs/intro">Documentation</a>
                 </td>
                 <td>
-                  <a href="">Release Notes</a>
+                  <a href="https://github.com/testing-library/native-testing-library/releases/latest">
+                    Changelog
+                  </a>
                 </td>
               </tr>
             </tbody>
@@ -45,6 +47,17 @@ function Versions(props) {
             This is the version that is configured automatically when you first install this
             project.
           </p>
+          <h3 id="latest">Next version</h3>
+          <table className="versions">
+            <tbody>
+              <tr>
+                <th>next</th>
+                <td>
+                  <a href="/docs/next/intro">Documentation</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
           <h3 id="archive">Past Versions</h3>
           <table className="versions">
             <tbody>
@@ -56,7 +69,7 @@ function Versions(props) {
                       <td>
                         {/* You are supposed to fill this href by yourself
                         Example: href={`docs/${version}/doc.html`} */}
-                        <a href={`docs/${version}/doc.html`}>Documentation</a>
+                        <a href={`docs/${version}/intro`}>Documentation</a>
                       </td>
                       <td>
                         <a href={`${repoUrl}/releases/tag/v${version}`}>Changelog</a>

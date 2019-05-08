@@ -8,14 +8,7 @@
       "guiding-principles",
       "cheat-sheet"
     ],
-    "API": [
-      "api-queries",
-      "api-events",
-      "api-async",
-      "api-helpers",
-      "api-render",
-      "api-act"
-    ],
+    "API": ["api-main", "api-queries", "api-events", "api-async", "api-helpers"],
     "Ecosystem": ["ecosystem-jest-native", "ecosystem-jest-preset"]
   },
   "recipes": {

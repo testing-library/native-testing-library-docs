@@ -1,7 +1,8 @@
 ---
-id: setup
+id: version-3.0.0-setup
 title: Setup
 sidebar_label: Setup
+original_id: setup
 ---
 
 ## Setting up your project

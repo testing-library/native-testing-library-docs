@@ -1,7 +1,7 @@
 ---
-id: api-render
-title: Render
-sidebar_label: Render
+id: api-main
+title: Main
+sidebar_label: Main
 ---
 
 ## `render`
@@ -15,7 +15,7 @@ function render(
 ): RenderResult;
 ```
 
-Create a `ReactTestRenderer Instance`.
+Create a `NativeTestInstance`.
 
 ```jsx
 import { render } from 'native-testing-library';
@@ -24,13 +24,17 @@ render(<View />);
 ```
 
 ```javascript
-import { render } from 'native-testing-library';
+import { render, toJSON } from 'native-testing-library';
 
 test('renders a message', () => {
   const { container, getByText } = render(<Text>Hello, World!</Text>);
   expect(getByText('Hello, world!')).toBeTruthy();
-  expect(container.toJSON()).toMatchInlineSnapshot(`
-    <Text>Hello, World!</Text>
+  expect(toJSON(container)).toMatchInlineSnapshot(`
+<View
+  testID="ntl-container"
+>
+  <Text>Hello, World!</Text>
+</View>
   `);
 });
 ```
@@ -83,20 +87,17 @@ const { getByText, getByTestId /* etc */ } = render(<Component />);
 
 ### `container`
 
-The `ReactTestRendererInstance` result from your render. This has helpful methods like `toTree()`
-and `toJSON()`.
-
-> You should rarely use the container. There are very few instances where you need to access the
-> container itself to do something you'd need to in a test.
+`native-testing-library` will create a View to wrap your react component passed to render. This
+ensures that there is always a single child passed to the `AppContainer` component.
 
 ### `baseElement`
 
-This is the root element of your render result. By default, this is what all of your queries will be
-run on, and you could also use it to do any custom searching logic you wanted to..
+This is the root element of your render result. This element is an `AppContainer` from
+`react-native`, and it appears as two nested `Views` at the root of your render.
 
 ### `debug`
 
-This method is a shortcut for `console.log(prettyPrint(container.toJSON()))`.
+This method is a shortcut for `console.log(prettyPrint(toJSON(baseElement)))`.
 
 ```javascript
 import { render } from 'native-testing-library';
@@ -112,6 +113,7 @@ debug();
 //     Hello World
 //   </Text>
 // </View>
+// you can also pass an element: debug(getByText('Hello World'))
 ```
 
 This is a simple wrapper around `prettyPrint` which is also exported.
@@ -136,8 +138,7 @@ rerender(<NumberDisplay number={2} />);
 
 This will cause the rendered component to be unmounted. This is useful for testing what happens when
 your component is removed from the page (like testing that you don't leave event handlers hanging
-around causing memory leaks). Note that you don't need to call this `afterEach` like you do in react
-testing library because these elements aren't being added to a DOM. Use it only as necessary.
+around causing memory leaks).
 
 > This method is a wrapper around ReactTestRenderer.unmount()
 
@@ -147,3 +148,33 @@ import { render } from 'native-testing-library';
 const { unmount } = render(<Login />);
 unmount();
 ```
+
+---
+
+## `cleanup`
+
+Unmounts React trees that were mounted with [render](#render).
+
+```jsx
+import { cleanup, render } from 'native-testing-library';
+
+afterEach(cleanup); // <-- add this
+
+test('renders into document', () => {
+  render(<View />);
+  // ...
+});
+
+// ... more tests ...
+```
+
+**If you don't want to add this to _every single test file_** then we recommend that you configure
+your test framework to run a file before your tests which does this automatically.
+
+---
+
+## `act`
+
+This is a light wrapper around the
+[`react-test-renderer` `act` function](https://reactjs.org/docs/test-renderer.html). All it does is
+forward all arguments to the act function if your version of react supports `act`.

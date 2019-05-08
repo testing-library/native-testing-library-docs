@@ -1,7 +1,7 @@
 ---
 id: intro
 title: Introduction
-sidebar_label: Intro
+sidebar_label: Introduction
 ---
 
 ## The problem

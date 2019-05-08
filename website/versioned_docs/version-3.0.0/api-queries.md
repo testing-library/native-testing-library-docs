@@ -1,7 +1,8 @@
 ---
-id: api-queries
+id: version-3.0.0-api-queries
 title: Queries
 sidebar_label: Queries
+original_id: api-queries
 ---
 
 ## Variants
