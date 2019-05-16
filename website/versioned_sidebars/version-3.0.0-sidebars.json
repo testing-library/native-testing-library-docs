@@ -10,14 +10,14 @@
     ],
     "API": [
       "version-3.0.0-api-main",
+      "version-3.0.0-api-test-instance",
       "version-3.0.0-api-queries",
       "version-3.0.0-api-events",
       "version-3.0.0-api-async",
       "version-3.0.0-api-helpers"
     ],
     "Ecosystem": [
-      "version-3.0.0-ecosystem-jest-native",
-      "version-3.0.0-ecosystem-jest-preset"
+      "version-3.0.0-ecosystem-jest-native"
     ]
   },
   "version-3.0.0-recipes": {

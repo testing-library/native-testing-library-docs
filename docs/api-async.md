@@ -62,7 +62,7 @@ Additionally, the result is returned for you to use.
 Here's a simple example:
 
 ```javascript
-const usernameElement = await waitForElement(() => getByA11yLabel('username'));
+const usernameElement = await waitForElement(() => getByLabelText('username'));
 expect(usernameElement).toHaveTextContent('chucknorris');
 ```
 
@@ -70,8 +70,8 @@ You can also wait for multiple elements at once:
 
 ```javascript
 const [usernameElement, passwordElement] = await waitForElement(() => [
-  getByA11yLabel('username'),
-  getByA11yLabel('password'),
+  getByLabelText('username'),
+  getByLabelText('password'),
 ]);
 ```
 
@@ -101,17 +101,7 @@ callback is returned as a Promise, but in most cases you won't need it.
 Here's a simple example:
 
 ```javascript
-const listItems = await waitForElementToBeRemoved(() => queryAllByA11yLabel('list-item'));
-expect(listItems).toHaveLength(0);
-```
-
-You can also wait for multiple elements to be removed at once:
-
-```javascript
-const [usernameElement, passwordElement] = await waitForElementToBeRemoved(() => [
-  queryByA11yLabel('username'),
-  queryByA11yLabel('password'),
-]);
+await waitForElementToBeRemoved(() => queryAllByLabelText('list-item'));
 ```
 
 The default `timeout` is `4500ms` which will keep you under

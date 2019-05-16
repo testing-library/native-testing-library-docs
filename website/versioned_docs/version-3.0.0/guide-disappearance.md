@@ -1,6 +1,7 @@
 ---
-id: guide-disappearance
+id: version-3.0.0-guide-disappearance
 title: Appearance and Disappearance
+original_id: guide-disappearance
 ---
 
 `dom-testing-library` can utilize a fake DOM `MutationObserver` to look for changes, but we don't

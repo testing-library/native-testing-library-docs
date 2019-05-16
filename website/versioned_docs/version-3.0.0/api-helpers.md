@@ -61,45 +61,30 @@ in a browser, where any extra whitespace within words in the html code is not me
 text is rendered, and all text appears as one cohesive string regardless of the code.
 
 ```javascript
-const inputNode = <TextInput value="words" />;
-const textNode = (
+getNodeText(
   <Text>
     {`
-  Hello
-    World  !
-  `}
-  </Text>
-);
-
-getNodeText(node); // "Hello World !"
-```
-
-This function is also used internally when querying nodes by their text content. This enables
-functions like `getByText` and `queryByText` to work as expected, finding elements in the tree
-similarly to how users would do.
-
-The function works for for input elements as well:
-
-```javascript
-const inputNode = <TextInput value="words" />;
-
-getNodeText(inputNode); // "words"
+    Hello
+      World  !
+    `}
+  </Text>,
+); // "Hello World !"
 ```
 
 ## `within` and `getQueriesForElement` APIs
 
-`within` (an alias to `getQueriesForElement`) takes a `ReactTestRendererInstance` and binds it to
-the raw query functions, allowing them to be used without manually specifying a container.
+`within` (an alias to `getQueriesForElement`) takes a `NativeTestInstance` and binds it to the raw
+query functions, allowing them to be used without manually specifying a container.
 
 Example: To get the username input of a login form within a `<LoginModal />`, you could do:
 
 ```js
 import { render, within } from 'native-testing-library';
 
-const { getByA11yLabel } = render(<LoginModal />);
-const loginForm = getByA11yLabel('login-form');
+const { getByLabelText } = render(<LoginModal />);
+const loginForm = getByLabelText('login-form');
 
-within(loginForm).getByPlaceholder('Username');
+within(loginForm).getByPlaceholderText('Username');
 ```
 
 ## Debugging

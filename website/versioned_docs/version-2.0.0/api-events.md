@@ -8,16 +8,16 @@ original_id: api-events
 ## Basic example
 
 ```javascript
-import { fireEvent, NativeEvent, render } from 'native-testing-library';
+import { fireEvent, NativeTestEvent, render } from 'native-testing-library';
 
 const { getByText } = render(<Button title="Submit" />);
-fireEvent(getByText(container, 'Submit'), new NativeEvent('press'));
+fireEvent(getByText(container, 'Submit'), new NativeTestEvent('press'));
 ```
 
 ## `fireEvent[eventName]`
 
 ```typescript
-fireEvent[eventName](node: FiberRoot, eventProperties: NativeEvent)
+fireEvent[eventName](node: FiberRoot, eventProperties: NativeTestEvent)
 ```
 
 Convenience methods for firing events. Check out
@@ -50,5 +50,8 @@ fireEvent.changeText(getByA11yLabel(/username/i), 'a');
 to fire. This is how you would fire one of these events:
 
 ```javascript
-fireEvent(getByTestId('swiper'), new NativeEvent('myEvent', { nativeEvent: { value: 'testing' } }));
+fireEvent(
+  getByTestId('swiper'),
+  new NativeTestEvent('myEvent', { nativeEvent: { value: 'testing' } }),
+);
 ```

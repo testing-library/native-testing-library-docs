@@ -33,4 +33,5 @@ test('calling render with the same component on the same container does not remo
 
   expect(getByTestId('instance-id').props.children).toEqual(1);
 });
+
 ```

@@ -43,10 +43,6 @@ function Versions(props) {
               </tr>
             </tbody>
           </table>
-          <p>
-            This is the version that is configured automatically when you first install this
-            project.
-          </p>
           <h3 id="latest">Next version</h3>
           <table className="versions">
             <tbody>

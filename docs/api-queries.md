@@ -62,7 +62,7 @@ See [TextMatch](#textmatch) for documentation on what can be passed to a query.
 
 ```typescript
 getByHintText(
-  container: ReactTestRenderer | NativeTestInstance,
+  container: NativeTestInstance,
   match: TextMatch,
   options?: {
     exact?: boolean = true,
@@ -91,7 +91,7 @@ getByHintText('summary'); // returns the View node
 
 ```typescript
 getByLabelText(
-  container: ReactTestRenderer | NativeTestInstance,
+  container: NativeTestInstance,
   match: TextMatch,
   options?: {
     exact?: boolean = true,
@@ -130,7 +130,7 @@ getByLabelText('username'); // returns the TextInput node
 
 ```typescript
 getByRole(
-  container: ReactTestRenderer | NativeTestInstance,
+  container: NativeTestInstance,
   match: TextMatch,
   options?: {
     selector?: SelectorFn,
@@ -158,7 +158,7 @@ getByRole('summary'); // returns the View node
 
 ```typescript
 getByPlaceholderText(
-  container: ReactTestRenderer | NativeTestInstance,
+  container: NativeTestInstance,
   match: TextMatch,
   options?: {
     exact?: boolean = true,
@@ -186,7 +186,7 @@ getByPlaceholderText('Username'); // returns the TextInput node
 
 ```typescript
 getByText(
-  container: ReactTestRenderer | NativeTestInstance,
+  container: NativeTestInstance,
   match: TextMatch,
   options?: {
     exact?: boolean = true,
@@ -198,8 +198,7 @@ getByText(
 ```
 
 This will search for all elements of type `Text` with `props.children` matching the given. It will
-also search `TextInput` elements by their value and `Button` elements by their `title`
-[`TextMatch`](#textmatch).
+also search for `Button` elements by their `title` [`TextMatch`](#textmatch).
 
 ```js
 import { render } from 'native-testing-library';
@@ -215,7 +214,7 @@ getByText(/about/i); // returns the Text node
 
 ```typescript
 getByTitle(
-  container: ReactTestRenderer | NativeTestInstance,
+  container: NativeTestInstance,
   match: TextMatch,
   options?: {
     exact?: boolean = true,
@@ -237,13 +236,14 @@ const { getByTitle } = render(<Button title="About" />);
 getByTitle(/about/i); // returns the Button node
 ```
 
-### `ByValue`
+### `ByDisplayValue`
 
-> getByValue, queryByValue, getAllByValue, queryAllByValue, findByValue, findAllByValue
+> getByDisplayValue, queryByDisplayValue, getAllByDisplayValue, queryAllByDisplayValue,
+> findByDisplayValue, findAllByDisplayValue
 
 ```typescript
-getByValue(
-  container: ReactTestRenderer | NativeTestInstance,
+getByDisplayValue(
+  container: NativeTestInstance,
   match: TextMatch,
   options?: {
     exact?: boolean = true,
@@ -254,15 +254,15 @@ getByValue(
   }): NormalizerOptions
 ```
 
-This will search for all `TextInput` elements with a `value` prop or `Picker` elements with a
-`selectedValue` prop and find ones that matches the given [`TextMatch`](#textmatch).
+This will search for all `TextInput` elements with a `value` prop and `Picker` or `Switch` elements
+with a `selectedValue` prop and find ones that matches the given [`TextMatch`](#textmatch).
 
 ```js
 import { render } from 'native-testing-library';
 
-const { getByValue } = render(<Input value="About ℹ" onChangeText={() => ({})} />);
+const { getByDisplayValue } = render(<Input value="About ℹ" onChangeText={() => ({})} />);
 
-getByValue(/about/i); // returns the Input node
+getByDisplayValue(/about/i); // returns the Input node
 ```
 
 ### `ByTestId`
@@ -271,7 +271,7 @@ getByValue(/about/i); // returns the Input node
 
 ```typescript
 getByTestId(
-  container: ReactTestRenderer | NativeTestInstance,
+  container: NativeTestInstance,
   match: TextMatch,
   options?: {
     trim?: boolean = true,
