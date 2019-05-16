@@ -1,7 +1,8 @@
 ---
-id: api-helpers
+id: version-3.0.0-api-helpers
 title: Helpers
 sidebar_label: Helpers
+original_id: api-helpers
 ---
 
 ## Custom Queries

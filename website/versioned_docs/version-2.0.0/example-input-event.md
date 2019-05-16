@@ -1,7 +1,8 @@
 ---
-id: example-input-event
+id: version-2.0.0-example-input-event
 title: Input Event
 sidebar_label: Input Event
+original_id: example-input-event
 ---
 
 ```javascript
@@ -36,7 +37,7 @@ class CostInput extends React.Component {
 
 const setup = () => {
   const utils = render(<CostInput />);
-  const input = utils.getByLabelText('cost-input');
+  const input = utils.getByA11yLabel('cost-input');
   return {
     input,
     ...utils,

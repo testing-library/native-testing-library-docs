@@ -1,7 +1,8 @@
 ---
-id: api-events
+id: version-2.0.0-api-events
 title: Firing Events
 sidebar_label: Firing Events
+original_id: api-events
 ---
 
 ## Basic example
@@ -35,14 +36,14 @@ called nativeEvent. When you fire an event using this library, you will have to 
 config. You will use this particularly for events like a change event:
 
 ```javascript
-fireEvent.change(getByLabelText(/username/i), { nativeEvent: { text: 'a' } });
+fireEvent.change(getByA11yLabel(/username/i), { nativeEvent: { text: 'a' } });
 ```
 
 **changeText**: `Text` has a method for value updating called `onChangeText`. Since this is such a
 commonly used method, there is a special case in the library for this method.
 
 ```javascript
-fireEvent.changeText(getByLabelText(/username/i), 'a');
+fireEvent.changeText(getByA11yLabel(/username/i), 'a');
 ```
 
 **customEvent**: You may be using a library that has custom event listeners that you want to be able

@@ -1,7 +1,8 @@
 ---
-id: cheat-sheet
+id: version-2.0.0-cheat-sheet
 title: Printable Cheat Sheet
 sidebar_label: Cheat Sheet
+original_id: cheat-sheet
 ---
 
 There is a printable one-page cheat sheet available for you to download. It is intended to be a

@@ -1,7 +1,8 @@
 ---
-id: hook-example-useState
+id: version-2.0.0-hook-example-useState
 title: useState Hook
 sidebar_label: useState Hook
+original_id: hook-example-useState
 ---
 
 ```javascript

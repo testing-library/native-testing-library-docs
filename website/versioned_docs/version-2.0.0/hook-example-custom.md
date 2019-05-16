@@ -1,7 +1,8 @@
 ---
-id: hook-example-async
+id: version-2.0.0-hook-example-async
 title: Custom Hook
 sidebar_label: Custom Hook
+original_id: hook-example-async
 ---
 
 ```javascript

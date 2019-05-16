@@ -1,7 +1,8 @@
 ---
-id: api-render
+id: version-2.0.0-api-render
 title: Render
 sidebar_label: Render
+original_id: api-render
 ---
 
 ## `render`

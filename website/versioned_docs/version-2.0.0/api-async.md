@@ -1,7 +1,8 @@
 ---
-id: api-async
-title: Async Utilities
-sidebar_label: Async Utilities
+id: version-2.0.0-api-async
+title: Async
+sidebar_label: Async
+original_id: api-async
 ---
 
 Several utilities are provided for dealing with asynchronous code. These can be useful to wait for
@@ -26,8 +27,8 @@ expectations to pass. The `wait` function is a small wrapper around the
 example:
 
 ```javascript
-await wait(() => getByLabelText('username'));
-getByLabelText('username').value = 'chucknorris';
+await wait(() => getByLabelText(container, 'username'));
+getByLabelText(container, 'username').value = 'chucknorris';
 ```
 
 This can be useful if you have a unit test that mocks API calls and you need to wait for your mock
@@ -49,60 +50,38 @@ the event loop (in a `setTimeout`) before starting the intervals.
 function waitForElement<T>(
   callback: () => T,
   options?: {
+    container?: ReactTestInstance;
     timeout?: number;
     interval?: number;
   },
 ): Promise<T>;
 ```
 
-When you need to wait for elements to appear, you can use `waitForElement`. The `waitForElement`
-function is a similar to `wait`, but is specifically intended to wait for an element to appear.
-Additionally, the result is returned for you to use.
+When in need to wait for DOM elements to appear, disappear, or change you can use `waitForElement`.
+The `waitForElement` function is a similar to `wait`, but is a helper specifically intended to wait
+for an element.
 
 Here's a simple example:
 
 ```javascript
-const usernameElement = await waitForElement(() => getByLabelText('username'));
-expect(usernameElement).toHaveTextContent('chucknorris');
+const usernameElement = await waitForElement(() => getByA11yLabel(container, 'username'), {
+  container,
+});
+expect(usernameElement.props.children).toBe('chucknorris');
 ```
 
 You can also wait for multiple elements at once:
 
 ```javascript
-const [usernameElement, passwordElement] = await waitForElement(() => [
-  getByLabelText('username'),
-  getByLabelText('password'),
-]);
+const [usernameElement, passwordElement] = await waitForElement(
+  () => [getByA11yLabel(container, 'username'), getByA11yLabel(container, 'password')],
+  { container },
+);
 ```
 
-The default `timeout` is `4500ms` which will keep you under
-[Jest's default timeout of `5000ms`](https://facebook.github.io/jest/docs/en/jest-object.html#jestsettimeouttimeout).
-
-The default `interval` is `50ms`. However it will run your callback immediately on the next tick of
-the event loop (in a `setTimeout`) before starting the intervals.
-
-## `waitForElementToBeRemoved`
-
-```typescript
-function waitForElementToBeRemoved<T>(
-  callback: () => T,
-  options?: {
-    timeout?: number;
-    interval?: number;
-  },
-): Promise<T>;
-```
-
-When you need to wait for elements to be removed, or you can use `waitForElementToBeRemoved`. The
-`waitForElementToBeRemoved` function is a similar to `wait`, but is a helper specifically intended
-to wait for an element to be removed from the tree. Similarly to `waitForElement` the result of the
-callback is returned as a Promise, but in most cases you won't need it.
-
-Here's a simple example:
-
-```javascript
-await waitForElementToBeRemoved(() => queryAllByLabelText('list-item'));
-```
+The default `container` is the root `ReactTestInstance` that is the result of `render`. Make sure
+the elements you wait for will be attached to it, or set a different `ReactTestInstance` as a
+container.
 
 The default `timeout` is `4500ms` which will keep you under
 [Jest's default timeout of `5000ms`](https://facebook.github.io/jest/docs/en/jest-object.html#jestsettimeouttimeout).

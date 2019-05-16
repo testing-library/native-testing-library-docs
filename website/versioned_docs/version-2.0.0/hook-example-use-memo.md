@@ -1,7 +1,8 @@
 ---
-id: hook-example-use-memo
+id: version-2.0.0-hook-example-use-memo
 title: useMemo Hook
 sidebar_label: useMemo Hook
+original_id: hook-example-use-memo
 ---
 
 ```javascript

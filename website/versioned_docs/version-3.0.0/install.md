@@ -1,7 +1,8 @@
 ---
-id: install
+id: version-3.0.0-install
 title: Install
 sidebar_label: Install
+original_id: install
 ---
 
 ## Installation

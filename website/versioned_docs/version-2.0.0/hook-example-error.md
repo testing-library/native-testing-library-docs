@@ -1,7 +1,8 @@
 ---
-id: hook-example-error
+id: version-2.0.0-hook-example-error
 title: Error Hook
 sidebar_label: Error Hook
+original_id: hook-example-error
 ---
 
 ```javascript

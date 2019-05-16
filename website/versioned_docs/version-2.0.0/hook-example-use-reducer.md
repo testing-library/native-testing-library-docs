@@ -1,7 +1,8 @@
 ---
-id: hook-example-use-reducer
+id: version-2.0.0-hook-example-use-reducer
 title: useReducer Hook
 sidebar_label: useReducer Hook
+original_id: hook-example-use-reducer
 ---
 
 ```javascript

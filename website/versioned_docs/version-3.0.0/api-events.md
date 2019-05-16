@@ -1,7 +1,8 @@
 ---
-id: api-events
+id: version-3.0.0-api-events
 title: Firing Events
 sidebar_label: Firing Events
+original_id: api-events
 ---
 
 ## Basic example

@@ -1,7 +1,8 @@
 ---
-id: hook-example-use-ref
+id: version-2.0.0-hook-example-use-ref
 title: useRef Hook
 sidebar_label: useRef Hook
+original_id: hook-example-use-ref
 ---
 
 ```javascript

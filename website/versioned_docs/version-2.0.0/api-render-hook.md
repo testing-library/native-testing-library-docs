@@ -1,7 +1,8 @@
 ---
-id: api-render-hook
+id: version-2.0.0-api-render-hook
 title: Render Hook
 sidebar_label: Render Hook
+original_id: api-render-hook
 ---
 
 ## `renderHook`

@@ -1,7 +1,8 @@
 ---
-id: hook-example-test
+id: version-2.0.0-hook-example-test
 title: Test Hook
 sidebar_label: Test Hook
+original_id: hook-example-test
 ---
 
 ```javascript

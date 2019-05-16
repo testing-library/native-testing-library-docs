@@ -1,7 +1,8 @@
 ---
-id: intro
+id: version-2.0.0-intro
 title: Introduction
-sidebar_label: Introduction
+sidebar_label: Intro
+original_id: intro
 ---
 
 ## The problem
@@ -21,10 +22,10 @@ of the differences between the two platforms. Although most framework implementa
 `react-testing-library` are thin layers over [dom-testing-library](https://testing-library.com),
 this library needed to have its own base implementation as well as a user-facing API. This library
 uses the [react-test-renderer](https://reactjs.org/docs/test-renderer.html), whereas
-`dom-testing-library` uses ReactDOM to render to JSDOM. The main philosophy is that you should find
-elements the way your users would. This approach is meant to give you confidence that your app is
-working as a cohesive unit. Just like the `dom-testing-library`, `native-testing-library`'s primary
-guiding principle is:
+`dom-testing-library` uses JSDOM. The main philosophy here is that you should find elements on the
+"screen" the way users would. This approach is meant to give you confidence that your app is working
+as a cohesive unit. Just like the `dom-testing-library`, `native-testing-library`'s primary guiding
+principle is:
 
 > [The more your tests resemble the way your software is used, the more confidence they can give you.](guiding-principles.md)
 
@@ -34,11 +35,13 @@ types of things your users can see. We also give you the ability to search for e
 but you should consider it a last resort because users can't see a testID and it can introduce
 unpredictable behavior in your tests.
 
-It will also encourage you to build more accessible apps. For example, disabled users can't see a
-touchable icon that doesn't have an accessibility label, so neither can your tests. We believe that
+It will also encourage you to build more accessible apps. For example, your users can't see your
+icon touchable that doesn't have an accessibility label, so neither can your tests. We believe that
 writing good tests using this library will force you to give more consideration to whether what
 you're doing is an accessible experience for all of your users.
 
-This library may work with any any testing framework like Jest or Mocha, but we do recommend you use
-Jest with the `react-native` Jest preset. We have not tested it in any other environment, and likely
-won't be able to support usage with another library.
+This library should, in theory, work with any any testing framework like Jest or Mocha, but we do
+recommend you use Jest with the `react-native` Jest preset. We have not tested it in any other
+environment, and likely won't be able to support usage with another library.
+
+[jest]: https://jestjs.io

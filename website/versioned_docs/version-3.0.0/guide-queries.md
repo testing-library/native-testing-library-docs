@@ -1,6 +1,7 @@
 ---
-id: guide-queries
+id: version-3.0.0-guide-queries
 title: How Should I Query?
+original_id: guide-queries
 ---
 
 ## Priority

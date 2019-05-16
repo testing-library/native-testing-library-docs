@@ -21,7 +21,7 @@
 //];
 
 const siteConfig = {
-  title: 'React Native Testing Library', // Title for your website.
+  title: 'Native Testing Library', // Title for your website.
   tagline:
     'Simple and complete React Native testing utilities that encourage good testing practices.',
   url: 'https://native-testing-library.com', // Your website URL

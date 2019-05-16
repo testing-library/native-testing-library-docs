@@ -1,7 +1,8 @@
 ---
-id: hook-example-use-effect
+id: version-2.0.0-hook-example-use-effect
 title: useEffect Hook
 sidebar_label: useEffect Hook
+original_id: hook-example-use-effect
 ---
 
 ```javascript

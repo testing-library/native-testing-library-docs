@@ -1,6 +1,7 @@
 ---
-id: guide-disappearance
+id: version-2.0.0-guide-disappearance
 title: Appearance and Disappearance
+original_id: guide-disappearance
 ---
 
 `dom-testing-library` can utilize a fake DOM `MutationObserver` to look for changes, but we don't
@@ -60,7 +61,7 @@ expect(submitButton).toBeNull(); // it doesn't exist
 ```
 
 The `queryAll` APIs version return an array of matching nodes. The length of the array can be useful
-for assertions after elements are added or remove.
+for assertions after elements are added or removed from the DOM.
 
 ```javascript
 const submitButtons = queryAllByText(container, 'submit');

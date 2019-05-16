@@ -1,7 +1,8 @@
 ---
-id: hook-example-async
+id: version-2.0.0-hook-example-async
 title: Async Hook
 sidebar_label: Async Hook
+original_id: hook-example-async
 ---
 
 ```javascript

@@ -1,7 +1,8 @@
 ---
-id: hook-example-use-context
+id: version-2.0.0-hook-example-use-context
 title: useContext Hook
 sidebar_label: useContext Hook
+original_id: hook-example-use-context
 ---
 
 ```javascript

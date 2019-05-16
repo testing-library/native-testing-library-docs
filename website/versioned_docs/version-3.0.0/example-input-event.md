@@ -1,7 +1,8 @@
 ---
-id: example-input-event
+id: version-3.0.0-example-input-event
 title: Input Event
 sidebar_label: Input Event
+original_id: example-input-event
 ---
 
 ```javascript

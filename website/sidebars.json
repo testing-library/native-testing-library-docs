@@ -9,13 +9,12 @@
       "cheat-sheet"
     ],
     "API": [
+      "api-main",
+      "api-test-instance",
       "api-queries",
       "api-events",
       "api-async",
-      "api-helpers",
-      "api-render",
-      "api-render-hook",
-      "api-act"
+      "api-helpers"
     ],
     "Ecosystem": ["ecosystem-jest-native"]
   },
@@ -28,18 +27,6 @@
       "example-navigation",
       "example-redux",
       "example-update-props"
-    ],
-    "Hook Examples": [
-      "hook-example-async",
-      "hook-example-custom",
-      "hook-example-error",
-      "hook-example-test",
-      "hook-example-use-context",
-      "hook-example-use-effect",
-      "hook-example-use-memo",
-      "hook-example-use-reducer",
-      "hook-example-use-ref",
-      "hook-example-use-state"
     ]
   }
 }

@@ -1,7 +1,8 @@
 ---
-id: intro
+id: version-3.0.0-intro
 title: Introduction
 sidebar_label: Introduction
+original_id: intro
 ---
 
 ## The problem

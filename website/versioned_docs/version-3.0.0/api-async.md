@@ -1,7 +1,8 @@
 ---
-id: api-async
+id: version-3.0.0-api-async
 title: Async Utilities
 sidebar_label: Async Utilities
+original_id: api-async
 ---
 
 Several utilities are provided for dealing with asynchronous code. These can be useful to wait for
