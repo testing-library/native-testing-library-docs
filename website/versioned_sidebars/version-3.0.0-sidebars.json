@@ -1,0 +1,37 @@
+{
+  "version-3.0.0-docs": {
+    "Getting started": [
+      "version-3.0.0-intro",
+      "version-3.0.0-install",
+      "version-3.0.0-example",
+      "version-3.0.0-setup",
+      "version-3.0.0-guiding-principles",
+      "version-3.0.0-cheat-sheet"
+    ],
+    "API": [
+      "version-3.0.0-api-main",
+      "version-3.0.0-api-test-instance",
+      "version-3.0.0-api-queries",
+      "version-3.0.0-api-events",
+      "version-3.0.0-api-async",
+      "version-3.0.0-api-helpers"
+    ],
+    "Ecosystem": [
+      "version-3.0.0-ecosystem-jest-native"
+    ]
+  },
+  "version-3.0.0-recipes": {
+    "Guides": [
+      "version-3.0.0-guide-queries",
+      "version-3.0.0-guide-disappearance"
+    ],
+    "Examples": [
+      "version-3.0.0-example-context",
+      "version-3.0.0-example-input-event",
+      "version-3.0.0-example-intl",
+      "version-3.0.0-example-navigation",
+      "version-3.0.0-example-redux",
+      "version-3.0.0-example-update-props"
+    ]
+  }
+}
