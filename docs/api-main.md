@@ -149,6 +149,32 @@ const { unmount } = render(<Login />);
 unmount();
 ```
 
+### asJSON
+
+Returns a JSON representation of the current state of your rendered component. This can be useful if
+you need to avoid live bindings and see how your component reacts to events.
+
+```javascript
+import { render, fireEvent } from 'native-testing-library';
+
+function TestComponent() {
+  const [count, setCount] = React.useState(0);
+
+  return (
+    <Button onPress={() => setCount(state => state + 1)} title={`Click to increase: ${count}`} />
+  );
+}
+
+const { getByText, asJSON } = render(<TestComponent />);
+const firstRender = asJSON();
+
+fireEvent.press(getByText(/Click to increase/));
+
+// This will snapshot the difference before and after the press event.
+// See https://github.com/jest-community/snapshot-diff
+expect(firstRender).toMatchDiffSnapshot(asJSON());
+```
+
 ---
 
 ## `cleanup`
