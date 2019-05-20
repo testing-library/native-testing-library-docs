@@ -1,7 +1,8 @@
 ---
-id: ecosystem-jest-native
+id: version-3.0.0-ecosystem-jest-native
 title: Jest Matchers
 sidebar_label: Jest Matchers
+original_id: ecosystem-jest-native
 ---
 
 [`jest-native`](https://github.com/testing-library/jest-native) is a companion library for

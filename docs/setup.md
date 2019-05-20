@@ -15,6 +15,26 @@ preset should also work, but you'll be getting the best experience when using ou
 be some additional mocks you need to provide to such as mocks for `react-native-gesture-handler`
 when using `react-navigation`.
 
+## Cleanup
+
+You can ensure [`cleanup`](./api-main#cleanup) is called after each test and import additional
+assertions by adding it to the setup configuration in Jest.
+
+In Jest 24 and up, add the
+[`setupFilesAfterEnv`](https://jestjs.io/docs/en/configuration.html#setupfilesafterenv-array) option
+to your Jest config:
+
+```javascript
+// jest.config.js
+module.exports = {
+  setupFilesAfterEnv: [
+    'native-testing-library/cleanup-after-each',
+    // ... other setup files ...
+  ],
+  // ... other options ...
+};
+```
+
 ## Custom Render
 
 It's often useful to define a custom render method that includes things like global context
