@@ -149,7 +149,7 @@ const { unmount } = render(<Login />);
 unmount();
 ```
 
-### asJSON
+### `asJSON`
 
 Returns a JSON representation of the current state of your rendered component. This can be useful if
 you need to avoid live bindings and see how your component reacts to events.
