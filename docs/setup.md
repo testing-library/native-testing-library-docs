@@ -28,7 +28,7 @@ to your Jest config:
 // jest.config.js
 module.exports = {
   setupFilesAfterEnv: [
-    'native-testing-library/cleanup-after-each',
+    '@testing-library/react-native/cleanup-after-each',
     // ... other setup files ...
   ],
   // ... other options ...

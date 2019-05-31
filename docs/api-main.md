@@ -18,13 +18,13 @@ function render(
 Create a `NativeTestInstance`.
 
 ```jsx
-import { render } from 'native-testing-library';
+import { render } from '@testing-library/react-native';
 
 render(<View />);
 ```
 
 ```javascript
-import { render, toJSON } from 'native-testing-library';
+import { render, toJSON } from '@testing-library/react-native';
 
 test('renders a message', () => {
   const { container, getByText } = render(<Text>Hello, World!</Text>);
@@ -53,12 +53,12 @@ most useful for creating reusable custom render functions for common data provid
 
 ### `queries`
 
-Queries to bind. Overrides the default set from `native-testing-library` unless merged.
+Queries to bind. Overrides the default queries unless manually merged.
 
 ```js
 // Example, a function to traverse table contents
 import * as tableQueries from 'my-table-query-libary';
-import queries from 'native-testing-library';
+import queries from '@testing-library/react-native';
 
 const { getByRowColumn, getByText } = render(<MyTable />, {
   queries: { ...queries, ...tableQueries },
@@ -87,8 +87,7 @@ const { getByText, getByTestId /* etc */ } = render(<Component />);
 
 ### `container`
 
-`native-testing-library` will create a View to wrap your react component passed to render. This
-ensures that there is always a single child passed to the `AppContainer` component.
+A View which wraps only the component you passed to render.
 
 ### `baseElement`
 
@@ -100,7 +99,7 @@ This is the root element of your render result. This element is an `AppContainer
 This method is a shortcut for `console.log(prettyPrint(toJSON(baseElement)))`.
 
 ```javascript
-import { render } from 'native-testing-library';
+import { render } from '@testing-library/react-native';
 
 const { debug } = render(
   <View>
@@ -124,7 +123,7 @@ Although its likely better to test updating your props the way a user would (thr
 interaction), this method will allow you to re-render your entire tree at the base with new props.
 
 ```jsx
-import { render } from 'native-testing-library';
+import { render } from '@testing-library/react-native';
 
 const { rerender } = render(<NumberDisplay number={1} />);
 
@@ -143,7 +142,7 @@ around causing memory leaks).
 > This method is a wrapper around ReactTestRenderer.unmount()
 
 ```javascript
-import { render } from 'native-testing-library';
+import { render } from '@testing-library/react-native';
 
 const { unmount } = render(<Login />);
 unmount();
@@ -155,7 +154,7 @@ Returns a JSON representation of the current state of your rendered component. T
 you need to avoid live bindings and see how your component reacts to events.
 
 ```javascript
-import { render, fireEvent } from 'native-testing-library';
+import { render, fireEvent } from '@testing-library/react-native';
 
 function TestComponent() {
   const [count, setCount] = React.useState(0);
@@ -182,7 +181,7 @@ expect(firstRender).toMatchDiffSnapshot(asJSON());
 Unmounts React trees that were mounted with [render](#render).
 
 ```jsx
-import { cleanup, render } from 'native-testing-library';
+import { cleanup, render } from '@testing-library/react-native';
 
 afterEach(cleanup); // <-- add this
 
@@ -194,7 +193,7 @@ test('renders into document', () => {
 // ... more tests ...
 ```
 
-In native-testing-library there is no DOM to cleanup, and your tests' rendered trees cannot
+In RNTL there is no DOM to cleanup, and your tests' rendered trees cannot
 interfere with each other. It is simply nice to be able to run any unmount logic in the components
 you have rendered in your tests.
 
