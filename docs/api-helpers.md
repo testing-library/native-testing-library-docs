@@ -6,10 +6,10 @@ sidebar_label: Helpers
 
 ## Custom Queries
 
-RNTL exposes some of the helper functions that are used to implement the default queries. You can
+A few helper functions are exposed that are used internally to implement the default queries. You can
 use the helpers to build custom queries. For example, the code below shows a way to query your
 TestInstance by a `style` prop. Note: test files would need to now import `test-utils.js` instead of
-importing directly from RNTL. Also note, please never actually implement this helper, it's just an
+importing directly from `@testing-library/react-native`. Also note, please never actually implement this helper, it's just an
 example of what's possible.
 
 ```javascript

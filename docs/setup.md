@@ -6,7 +6,7 @@ sidebar_label: Setup
 
 ## Setting up your project
 
-The RNTL API should work out of the box for most tests. All of the snippets you'll find throughout
+The API should work out of the box for most tests. All of the snippets you'll find throughout
 the website work without any additional configuration assuming you use Jest and a moderately recent
 version of React Native.
 
@@ -39,7 +39,7 @@ module.exports = {
 
 It's often useful to define a custom render method that includes things like global context
 providers, data stores, etc. To make this available globally, one approach is to define a utility
-file that re-exports everything from RNTL. You can replace `@testing-library/react-native` with this
+file that re-exports everything from this library. You can replace `@testing-library/react-native` with this
 file in all your imports. See [below](#configuring-jest-with-test-utils) for a way to make your test
 util file accessible without using relative paths.
 

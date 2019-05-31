@@ -4,7 +4,7 @@ title: Jest Matchers
 sidebar_label: Jest Matchers
 ---
 
-[`jest-native`](https://github.com/testing-library/jest-native) is a companion library for RNTL that
+[`jest-native`](https://github.com/testing-library/jest-native) is a companion library that
 provides custom element matchers for Jest.
 
 ```

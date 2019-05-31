@@ -50,7 +50,7 @@ most useful for creating reusable custom render functions for common data provid
 
 ### `queries`
 
-Queries to bind. Overrides the default set from RNTL unless merged.
+Queries to bind. Overrides the default queries unless merged.
 
 ```js
 // Example, a function to traverse table contents

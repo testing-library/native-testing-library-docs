@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>(React) Native Testing Library Docs</h1>
+  <h1>React Native Testing Library Docs</h1>
   
   <a href="https://www.joypixels.com/emoji/1f433">
     <img

@@ -319,7 +319,7 @@ of string matching:
 
 ### Normalization
 
-Before running any matching logic against text, RNTL automatically normalizes that text. By default,
+Before running any matching logic against text, it is automatically normalized. By default,
 normalization consists of trimming whitespace from the start and end of text, and collapsing
 multiple adjacent whitespace characters into a single space.
 
