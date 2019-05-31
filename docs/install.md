@@ -9,7 +9,7 @@ sidebar_label: Install
 This module should be installed in your project's `devDependencies`:
 
 ```
-npm install --save-dev native-testing-library
+npm install --save-dev @testing-library/react-native
 ```
 
 You will need `react` and `react-native` installed as _dependencies_ in order to run this project.
@@ -87,7 +87,7 @@ these components that isn't mocked, just `debug()` to see what your users are se
 You will likely be able to import everything you'll need from the project entry point like this:
 
 ```js
-import { render } from 'native-testing-library';
+import { render } from '@testing-library/react-native';
 ```
 
 The library's tests run in Node 8-11 before all new versions are published, and all files are

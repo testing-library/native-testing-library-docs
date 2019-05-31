@@ -3,10 +3,11 @@ id: guide-disappearance
 title: Appearance and Disappearance
 ---
 
-`dom-testing-library` can utilize a fake DOM `MutationObserver` to look for changes, but we don't
-have that luxury in the native/test renderer environment. Since we don't have that, you should know
-that all `wait-*` utilities in this library offer roughly the same functionality, just with some
-added convenience.
+Testing Library implementations that leverage
+[DTL](https://github.com/testing-library/dom-testing-library) can utilize a fake DOM
+`MutationObserver` to look for changes, but we don't have that luxury. Since we don't have that, you
+should know that all `wait-*` utilities in this library offer roughly the same functionality, just
+with some added convenience.
 
 Since we can't "observe" a DOM, we just have to poll it at a given interval
 

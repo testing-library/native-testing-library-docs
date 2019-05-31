@@ -19,13 +19,13 @@ function render(
 Render into a ReactTestInstance container.
 
 ```jsx
-import { render } from 'native-testing-library';
+import { render } from '@testing-library/react-native';
 
 render(<View />);
 ```
 
 ```javascript
-import { render } from 'native-testing-library';
+import { render } from '@testing-library/react-native';
 
 test('renders a message', () => {
   const { container, getByText, baseElement } = render(<Text>Hello, World!</Text>);
@@ -39,8 +39,8 @@ test('renders a message', () => {
 ## `render` Options
 
 Most of the time you won't need to pass any options to `render`, but when you do, you will pass them
-as the second parameter. There are some important key differences between this and
-`react-testing-library` that you will want to be aware of.
+as the second parameter. There are some important key differences between this and React Testing
+Library (RTL) that you will want to be aware of.
 
 ### `wrapper`
 
@@ -50,12 +50,12 @@ most useful for creating reusable custom render functions for common data provid
 
 ### `queries`
 
-Queries to bind. Overrides the default set from `native-testing-library` unless merged.
+Queries to bind. Overrides the default set from RNTL unless merged.
 
 ```js
 // Example, a function to traverse table contents
 import * as tableQueries from 'my-table-query-libary';
-import queries from 'native-testing-library';
+import queriesfrom '@testing-library/react-native';
 
 const { getByRowColumn, getByText } = render(<MyTable />, {
   queries: { ...queries, ...tableQueries },
@@ -102,7 +102,7 @@ methods from that library will work on this property.
 This method is a shortcut for `console.log(prettyPrint(baseElement))`.
 
 ```javascript
-import { render } from 'native-testing-library';
+import { render } from '@testing-library/react-native';
 
 const { debug } = render(
   <View>
@@ -125,7 +125,7 @@ Although its likely better to test updating your props the way a user would (thr
 interaction), this method will allow you to re-render your entire tree at the base with new props.
 
 ```jsx
-import { render } from 'native-testing-library';
+import { render } from '@testing-library/react-native';
 
 const { rerender } = render(<NumberDisplay number={1} />);
 
@@ -145,7 +145,7 @@ testing library because these elements aren't being added to a DOM. Use it only 
 > This method is a wrapper around ReactTestRenderer.unmount()
 
 ```javascript
-import { render } from 'native-testing-library';
+import { render } from '@testing-library/react-native';
 
 const { unmount } = render(<Login />);
 unmount();

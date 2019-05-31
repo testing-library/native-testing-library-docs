@@ -9,7 +9,7 @@ import React from 'react';
 import { Button, Text, View } from 'react-native';
 import { createStackNavigator, createAppContainer, withNavigation } from 'react-navigation';
 
-import { render, fireEvent } from ' native-testing-library';
+import { render, fireEvent } from '@testing-library/react-native';
 
 jest.mock('NativeAnimatedHelper').mock('react-native-gesture-handler', () => {
   const View = require('react-native/Libraries/Components/View/View');

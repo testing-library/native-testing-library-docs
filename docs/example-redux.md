@@ -9,7 +9,7 @@ import React from 'react';
 import { Button, Text, View } from 'react-native';
 import { createStore } from 'redux';
 import { Provider, connect } from 'react-redux';
-import { render, fireEvent } from ' native-testing-library';
+import { render, fireEvent } from '@testing-library/react-native';
 
 class Counter extends React.Component {
   increment = () => {

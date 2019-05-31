@@ -77,7 +77,7 @@ This will search for all elements with an `accessibilityHint` prop and find one 
 given [`TextMatch`](#textmatch).
 
 ```js
-import { render } from 'react-testing-library';
+import { render } from '@testing-library/react-native';
 
 const { getByHintText } = render(<View accessibilityHint="summary" />);
 
@@ -117,7 +117,7 @@ function Login({ onPress }) {
   );
 }
 
-import { render } from 'native-testing-library';
+import { render } from '@testing-library/react-native';
 
 const { getByLabelText } = render(<Login onPress={jest.fn()} />);
 
@@ -141,7 +141,7 @@ This will search for all elements with an `accessibilityRole` prop and find one 
 given [`TextMatch`](#textmatch).
 
 ```js
-import { render } from 'react-testing-library';
+import { render } from '@testing-library/react-native';
 
 const { getByRole } = render(<View accessibilityRole="summary" />);
 
@@ -173,7 +173,7 @@ This will search for all elements with a `placeholder` prop and find one that ma
 [`TextMatch`](#textmatch).
 
 ```javascript
-import { render } from 'native-testing-library';
+import { render } from '@testing-library/react-native';
 
 const { getByPlaceholderText } = render(<TextInput placeholder="Username" />);
 
@@ -201,7 +201,7 @@ This will search for all elements of type `Text` with `props.children` matching 
 also search for `Button` elements by their `title` [`TextMatch`](#textmatch).
 
 ```js
-import { render } from 'native-testing-library';
+import { render } from '@testing-library/react-native';
 
 const { getByText } = render(<Text>About ℹ</Text>);
 
@@ -229,7 +229,7 @@ This will search for all `Button` or `RefreshControl` elements with `props.title
 by their value [`TextMatch`](#textmatch).
 
 ```js
-import { render } from 'native-testing-library';
+import { render } from '@testing-library/react-native';
 
 const { getByTitle } = render(<Button title="About" />);
 
@@ -258,7 +258,7 @@ This will search for all `TextInput` elements with a `value` prop and `Picker` o
 with a `selectedValue` prop and find ones that matches the given [`TextMatch`](#textmatch).
 
 ```js
-import { render } from 'native-testing-library';
+import { render } from '@testing-library/react-native';
 
 const { getByDisplayValue } = render(<Input value="About ℹ" onChangeText={() => ({})} />);
 
@@ -286,7 +286,7 @@ This will search for all elements with a `testID` and find one that matches the 
 [`TextMatch`](#textmatch).
 
 ```js
-import { render } from 'native-testing-library';
+import { render } from '@testing-library/react-native';
 
 const { getByTestId } = render(<Text testID="test">hi there</Text>);
 
@@ -319,9 +319,9 @@ of string matching:
 
 ### Normalization
 
-Before running any matching logic against text, `native-testing-library` automatically normalizes
-that text. By default, normalization consists of trimming whitespace from the start and end of text,
-and collapsing multiple adjacent whitespace characters into a single space.
+Before running any matching logic against text, RNTL automatically normalizes that text. By default,
+normalization consists of trimming whitespace from the start and end of text, and collapsing
+multiple adjacent whitespace characters into a single space.
 
 If you want to prevent that normalization, or provide alternative normalization (e.g. to remove
 Unicode control characters), you can provide a `normalizer` function in the options object. This

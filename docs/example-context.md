@@ -8,7 +8,7 @@ sidebar_label: Context
 import React from 'react';
 import { Text } from 'react-native';
 
-import { render } from ' native-testing-library';
+import { render } from '@testing-library/react-native';
 import { NameContext, NameProvider, NameConsumer } from '../react-context';
 
 test('NameConsumer shows default value', () => {

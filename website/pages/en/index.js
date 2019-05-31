@@ -91,7 +91,7 @@ class Index extends React.Component {
               the more confidence they can give you.
             </i>
           </p>
-          <MarkdownBlock>`npm install --save-dev native-testing-library`</MarkdownBlock>
+          <MarkdownBlock>`npm install --save-dev @testing-library/react-native`</MarkdownBlock>
         </div>
       </Container>
     );

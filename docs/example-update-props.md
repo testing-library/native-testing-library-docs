@@ -7,7 +7,7 @@ sidebar_label: Update Props
 ```javascript
 import React from 'react';
 import { Text, View } from 'react-native';
-import { render } from ' native-testing-library';
+import { render } from '@testing-library/react-native';
 
 let idCounter = 1;
 
@@ -32,5 +32,4 @@ test('calling render with the same component on the same container does not remo
 
   expect(getByTestId('instance-id').props.children).toEqual(1);
 });
-
 ```

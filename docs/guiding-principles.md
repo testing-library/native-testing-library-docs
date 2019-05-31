@@ -19,6 +19,6 @@ Utilities are included in this project based on the following guiding principles
     they're intended to be used.
 3.  Utility implementations and APIs should be simple and flexible.
 
-In summary, we believe in the principles of `testing-library`, and adhere to them as closely as
+In summary, we believe in the principles of Testing Library, and adhere to them as closely as
 possible. At the end of the day, what we want is for this library to be pretty light-weight, simple,
 and understandable.

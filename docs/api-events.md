@@ -7,7 +7,7 @@ sidebar_label: Firing Events
 ## Basic example
 
 ```javascript
-import { fireEvent, NativeTestEvent, render } from 'native-testing-library';
+import { fireEvent, NativeTestEvent, render } from '@testing-library/react-native';
 
 const { getByText } = render(<Button title="Submit" />);
 fireEvent(getByText(container, 'Submit'), new NativeTestEvent('press'));
@@ -24,7 +24,7 @@ Convenience methods for firing events. Check out
 for a full list as well as `validTargets` for every event type.
 
 ```javascript
-import { fireEvent, render } from 'native-testing-library';
+import { fireEvent, render } from '@testing-library/react-native';
 
 const { getByText } = render(<Button title="Submit" />);
 fireEvent.press(getByText('Submit'));
