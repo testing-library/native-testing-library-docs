@@ -21,7 +21,7 @@
 //];
 
 const siteConfig = {
-  title: 'Native Testing Library', // Title for your website.
+  title: 'React Native Testing Library', // Title for your website.
   tagline:
     'Simple and complete React Native testing utilities that encourage good testing practices.',
   url: 'https://native-testing-library.com', // Your website URL
@@ -66,7 +66,7 @@ const siteConfig = {
   },
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
-  copyright: `Copyright © ${new Date().getFullYear()} Brandon Carroll`,
+  copyright: `Copyright © ${new Date().getFullYear()} Testing Library`,
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks.

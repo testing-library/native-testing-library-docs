@@ -13,21 +13,21 @@ This module should be installed in your project's `devDependencies`:
 npm install --save-dev @testing-library/react-native
 ```
 
-You will need `react` and `react-native` installed as _dependencies_ in order to run this project.
+You will need `react`, `react-native`, and `react-test-renderer` installed as _dependencies_ in order to run this project.
 
 ## Jest preset
 
 > It is **highly recommended** that you use the bundled Jest preset. You will likely experience
 > unexpected behavior and have a sub-optimal experience if you do not use the preset.
 
-`native-testing-library` includes an easy to adopt and reliable Jest preset to maximize the
+This library includes an easy to adopt and reliable Jest preset to maximize the
 confidence you have in your tests. It extends the `react-native` preset, and was created order to
 more closely mimic behavior you would expect from any other member of the `testing-library` family.
 
 ```diff
 // jest.config.js
 
-+ preset: 'native-testing-library'
++ preset: '@testing-library/react-native'
 - preset: 'react-native'
 ```
 
@@ -37,14 +37,14 @@ provided by the preset. Here's how you might do that:
 
 ```javascript
 const expoPreset = require('jest-expo/jest-preset.json');
-const jestPreset = require('native-testing-library/jest-preset');
+const jestPreset = require('@testing-library/react-native/jest-preset');
 
 module.exports = Object.assign(expoPreset, jestPreset, {
   setupFiles: [...expoPreset.setupFiles, ...jestPreset.setupFiles, './mySetup.js'],
 });
 ```
 
-> If you use Expo, be sure to include the Expo setup files before the native-testing-library setup
+> If you use Expo, be sure to include the Expo setup files before this library's setup
 > files! If you're using React Native, there's no need to do anything extra.
 
 Generally speaking though, it's better to include any setup files you have in the
