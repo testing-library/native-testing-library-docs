@@ -48,6 +48,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "neiker",
+      "name": "Javier Alvarez",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/688444?v=4",
+      "profile": "https://twitter.com/neiker",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7
