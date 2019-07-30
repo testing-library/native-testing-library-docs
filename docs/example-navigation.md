@@ -4,6 +4,19 @@ title: Navigation
 sidebar_label: Navigation
 ---
 
+
+```js
+// <project-root-path>/__mocks__/react-native-gesture-handler.js
+// react-native-gesture-handler use native modules, we need to mock it. 
+import { View } from 'react-native';
+
+export const State = {};
+export const PanGestureHandler = View;
+export const BaseButton = View;
+export const Directions = {};
+```
+
+
 ```javascript
 import React from 'react';
 import { Button, Text, View } from 'react-native';
@@ -11,15 +24,8 @@ import { createStackNavigator, createAppContainer, withNavigation } from 'react-
 
 import { render, fireEvent } from '@testing-library/react-native';
 
-jest.mock('NativeAnimatedHelper').mock('react-native-gesture-handler', () => {
-  const View = require('react-native/Libraries/Components/View/View');
-  return {
-    State: {},
-    PanGestureHandler: View,
-    BaseButton: View,
-    Directions: {},
-  };
-});
+// NativeAnimatedHelper is not mocked by default on react native's jest setup file.
+jest.mock('NativeAnimatedHelper');
 
 console.warn = arg => {
   const warnings = [
