@@ -22,7 +22,7 @@
 [![downloads](https://img.shields.io/npm/dm/native-testing-library.svg?style=flat-square)](http://www.npmtrends.com/native-testing-library)
 [![MIT License](https://img.shields.io/npm/l/native-testing-library.svg?style=flat-square)](https://github.com/testing-library/native-testing-library/blob/master/LICENSE)
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![Code of Conduct](https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square)](https://github.com/testing-library/native-testing-library/blob/master/CODE_OF_CONDUCT.md)
 
@@ -56,7 +56,15 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-<table><tr><td align="center"><a href="https://github.com/bcarroll22"><img src="https://avatars2.githubusercontent.com/u/11020406?v=4" width="100px;" alt="Brandon Carroll"/><br /><sub><b>Brandon Carroll</b></sub></a><br /><a href="https://github.com/testing-library/native-testing-library-docs/commits?author=bcarroll22" title="Code">💻</a> <a href="#content-bcarroll22" title="Content">🖋</a> <a href="https://github.com/testing-library/native-testing-library-docs/commits?author=bcarroll22" title="Documentation">📖</a> <a href="#design-bcarroll22" title="Design">🎨</a></td><td align="center"><a href="http://www.jmporchet.ch"><img src="https://avatars3.githubusercontent.com/u/3099008?v=4" width="100px;" alt="Jean-Marie Porchet"/><br /><sub><b>Jean-Marie Porchet</b></sub></a><br /><a href="https://github.com/testing-library/native-testing-library-docs/commits?author=jmporchet" title="Documentation">📖</a></td><td align="center"><a href="http://santiagomartin.dev"><img src="https://avatars2.githubusercontent.com/u/7255298?v=4" width="100px;" alt="Santi"/><br /><sub><b>Santi</b></sub></a><br /><a href="https://github.com/testing-library/native-testing-library-docs/commits?author=SantiMA10" title="Documentation">📖</a></td><td align="center"><a href="https://github.com/elyalvarado"><img src="https://avatars1.githubusercontent.com/u/545352?v=4" width="100px;" alt="Ely Alvarado"/><br /><sub><b>Ely Alvarado</b></sub></a><br /><a href="https://github.com/testing-library/native-testing-library-docs/commits?author=elyalvarado" title="Documentation">📖</a></td></tr></table>
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/bcarroll22"><img src="https://avatars2.githubusercontent.com/u/11020406?v=4" width="100px;" alt="Brandon Carroll"/><br /><sub><b>Brandon Carroll</b></sub></a><br /><a href="https://github.com/testing-library/native-testing-library-docs/commits?author=bcarroll22" title="Code">💻</a> <a href="#content-bcarroll22" title="Content">🖋</a> <a href="https://github.com/testing-library/native-testing-library-docs/commits?author=bcarroll22" title="Documentation">📖</a> <a href="#design-bcarroll22" title="Design">🎨</a></td>
+    <td align="center"><a href="http://www.jmporchet.ch"><img src="https://avatars3.githubusercontent.com/u/3099008?v=4" width="100px;" alt="Jean-Marie Porchet"/><br /><sub><b>Jean-Marie Porchet</b></sub></a><br /><a href="https://github.com/testing-library/native-testing-library-docs/commits?author=jmporchet" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://santiagomartin.dev"><img src="https://avatars2.githubusercontent.com/u/7255298?v=4" width="100px;" alt="Santi"/><br /><sub><b>Santi</b></sub></a><br /><a href="https://github.com/testing-library/native-testing-library-docs/commits?author=SantiMA10" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/elyalvarado"><img src="https://avatars1.githubusercontent.com/u/545352?v=4" width="100px;" alt="Ely Alvarado"/><br /><sub><b>Ely Alvarado</b></sub></a><br /><a href="https://github.com/testing-library/native-testing-library-docs/commits?author=elyalvarado" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://twitter.com/neiker"><img src="https://avatars0.githubusercontent.com/u/688444?v=4" width="100px;" alt="Javier Alvarez"/><br /><sub><b>Javier Alvarez</b></sub></a><br /><a href="https://github.com/testing-library/native-testing-library-docs/commits?author=neiker" title="Documentation">📖</a></td>
+  </tr>
+</table>
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
