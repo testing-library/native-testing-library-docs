@@ -57,6 +57,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "mattfwood",
+      "name": "Matt Wood",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/22530815?v=4",
+      "profile": "https://mattwood.tech/",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7
