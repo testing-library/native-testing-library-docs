@@ -35,7 +35,7 @@ that if you modify the `setupFiles` key that you include any additional files af
 provided by the preset. Here's how you might do that:
 
 ```javascript
-const expoPreset = require('jest-expo/jest-preset.json');
+const expoPreset = require('jest-expo/jest-preset.js');
 const jestPreset = require('@testing-library/react-native/jest-preset');
 
 module.exports = Object.assign(expoPreset, jestPreset, {
