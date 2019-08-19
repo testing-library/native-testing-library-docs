@@ -8,7 +8,7 @@ sidebar_label: Jest Matchers
 provides custom element matchers for Jest.
 
 ```
-npm install --save-dev jest-native
+npm install --save-dev @testing-library/jest-native
 ```
 
 ```javascript
