@@ -52,7 +52,7 @@ test('movie title goes away', async () => {
 ## Asserting elements are not present
 
 All `getBy` methods throw errors when they can't find their search, but `queryBy` methods don't. Any
-time you need to verify something isn't there, use `query`. Any time you need to verify something i
+time you need to verify something isn't there, use `query`. Any time you need to verify something is
 there, use `get`.
 
 ```javascript
