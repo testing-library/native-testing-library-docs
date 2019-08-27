@@ -22,7 +22,7 @@
 [![downloads](https://img.shields.io/npm/dm/native-testing-library.svg?style=flat-square)](http://www.npmtrends.com/native-testing-library)
 [![MIT License](https://img.shields.io/npm/l/native-testing-library.svg?style=flat-square)](https://github.com/testing-library/native-testing-library/blob/master/LICENSE)
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![Code of Conduct](https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square)](https://github.com/testing-library/native-testing-library/blob/master/CODE_OF_CONDUCT.md)
 
@@ -64,6 +64,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/elyalvarado"><img src="https://avatars1.githubusercontent.com/u/545352?v=4" width="100px;" alt="Ely Alvarado"/><br /><sub><b>Ely Alvarado</b></sub></a><br /><a href="https://github.com/testing-library/native-testing-library-docs/commits?author=elyalvarado" title="Documentation">📖</a></td>
     <td align="center"><a href="https://twitter.com/neiker"><img src="https://avatars0.githubusercontent.com/u/688444?v=4" width="100px;" alt="Javier Alvarez"/><br /><sub><b>Javier Alvarez</b></sub></a><br /><a href="https://github.com/testing-library/native-testing-library-docs/commits?author=neiker" title="Documentation">📖</a></td>
     <td align="center"><a href="https://mattwood.tech/"><img src="https://avatars1.githubusercontent.com/u/22530815?v=4" width="100px;" alt="Matt Wood"/><br /><sub><b>Matt Wood</b></sub></a><br /><a href="https://github.com/testing-library/native-testing-library-docs/commits?author=mattfwood" title="Documentation">📖</a></td>
+    <td align="center"><a href="http://www.twitter.com/jeremydavis"><img src="https://avatars3.githubusercontent.com/u/297572?v=4" width="100px;" alt="Jeremy Davis"/><br /><sub><b>Jeremy Davis</b></sub></a><br /><a href="https://github.com/testing-library/native-testing-library-docs/commits?author=jeremyadavis" title="Documentation">📖</a></td>
   </tr>
 </table>
 
