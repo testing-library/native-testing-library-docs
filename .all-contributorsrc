@@ -66,6 +66,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "jeremyadavis",
+      "name": "Jeremy Davis",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/297572?v=4",
+      "profile": "http://www.twitter.com/jeremydavis",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7
