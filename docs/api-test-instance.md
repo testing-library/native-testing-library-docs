@@ -51,9 +51,9 @@ This will be the type of the native node. For all queries you can make in this l
 will be a string.
 
 ```javascript
-const { findByText } = render(<Text>hello world</Text>);
+const { getByText } = render(<Text>hello world</Text>);
 
-expect(findByText(/hello world/i).type).toBe('hello world');
+expect(getByText(/hello world/i).type).toBe('Text');
 ```
 
 ## `props`
@@ -63,9 +63,9 @@ The props of the element you've queried for. These are meant to be the equivalen
 on using them directly.
 
 ```javascript
-const { findByText } = render(<Text style={{}}>hello world</Text>);
+const { getByText } = render(<Text style={{}}>hello world</Text>);
 
-console.log(findByText(/hello world/i).props);
+console.log(getByText(/hello world/i).props);
 ```
 
 ## `parentNode`
@@ -75,7 +75,7 @@ This will return only valid native node parents. This differs from the react-tes
 traversing the parents of your tree.
 
 ```javascript
-const { findByText } = render(
+const { getByText } = render(
   <View>
     <CustomComponent>
       <Text>hello world</Text>
@@ -83,7 +83,7 @@ const { findByText } = render(
   </View>,
 );
 
-expect(findByText(/hello world/i).parentNode.type).toBe('View'); // NOT CustomComponent
+expect(getByText(/hello world/i).parentNode.type).toBe('View'); // NOT CustomComponent
 ```
 
 ## `children`
@@ -93,7 +93,7 @@ children property in that way. You will not be able to get your implementation c
 traversing the children of your tree.
 
 ```javascript
-const { findByTestID } = render(
+const { getByTestID } = render(
   <View testID="my-wrapper">
     <CustomComponent>
       <Text>hello world</Text>
@@ -101,5 +101,5 @@ const { findByTestID } = render(
   </View>,
 );
 
-expect(findByTestID('my-wrapper').children[0].type).toBe('Text'); // NOT CustomComponent
+expect(getByTestID('my-wrapper').children[0].type).toBe('Text'); // NOT CustomComponent
 ```
