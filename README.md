@@ -22,7 +22,7 @@
 [![downloads](https://img.shields.io/npm/dm/native-testing-library.svg?style=flat-square)](http://www.npmtrends.com/native-testing-library)
 [![MIT License](https://img.shields.io/npm/l/native-testing-library.svg?style=flat-square)](https://github.com/testing-library/native-testing-library/blob/master/LICENSE)
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![Code of Conduct](https://img.shields.io/badge/code%20of-conduct-ff69b4.svg?style=flat-square)](https://github.com/testing-library/native-testing-library/blob/master/CODE_OF_CONDUCT.md)
 
@@ -68,6 +68,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/MoeSauber"><img src="https://avatars0.githubusercontent.com/u/53796298?v=4" width="100px;" alt="MoeSauber"/><br /><sub><b>MoeSauber</b></sub></a><br /><a href="https://github.com/testing-library/native-testing-library-docs/commits?author=MoeSauber" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/hansjhoffman"><img src="https://avatars2.githubusercontent.com/u/9221098?v=4" width="100px;" alt="Hans Hoffman"/><br /><sub><b>Hans Hoffman</b></sub></a><br /><a href="https://github.com/testing-library/native-testing-library-docs/commits?author=hansjhoffman" title="Documentation">📖</a></td>
   </tr>
 </table>
 
