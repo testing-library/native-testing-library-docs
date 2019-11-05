@@ -28,7 +28,7 @@ import { render, fireEvent } from '@testing-library/react-native';
 jest.mock('NativeAnimatedHelper');
 
 console.warn = arg => {
-  const warnings = [
+  const hiddenMessages = [
     'Calling .measureInWindow()',
     'Calling .measureLayout()',
     'Calling .setNativeProps()',
@@ -36,9 +36,9 @@ console.warn = arg => {
     'Calling .blur()',
   ];
 
-  const finalArgs = warnings.reduce((acc, curr) => (arg.includes(curr) ? [...acc, arg] : acc), []);
+  const warningShouldBeHidden = hiddenMessages.some(x => arg.includes(x))
 
-  if (!finalArgs.length) {
+  if (!warningShouldBeHidden) {
     console.warn(arg);
   }
 };
