@@ -55,7 +55,8 @@ and understandable.
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
 <table>
   <tr>
     <td align="center"><a href="https://github.com/bcarroll22"><img src="https://avatars2.githubusercontent.com/u/11020406?v=4" width="100px;" alt="Brandon Carroll"/><br /><sub><b>Brandon Carroll</b></sub></a><br /><a href="https://github.com/testing-library/native-testing-library-docs/commits?author=bcarroll22" title="Code">💻</a> <a href="#content-bcarroll22" title="Content">🖋</a> <a href="https://github.com/testing-library/native-testing-library-docs/commits?author=bcarroll22" title="Documentation">📖</a> <a href="#design-bcarroll22" title="Design">🎨</a></td>
@@ -69,9 +70,12 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://github.com/MoeSauber"><img src="https://avatars0.githubusercontent.com/u/53796298?v=4" width="100px;" alt="MoeSauber"/><br /><sub><b>MoeSauber</b></sub></a><br /><a href="https://github.com/testing-library/native-testing-library-docs/commits?author=MoeSauber" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/hansjhoffman"><img src="https://avatars2.githubusercontent.com/u/9221098?v=4" width="100px;" alt="Hans Hoffman"/><br /><sub><b>Hans Hoffman</b></sub></a><br /><a href="https://github.com/testing-library/native-testing-library-docs/commits?author=hansjhoffman" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/cloud-walker"><img src="https://avatars3.githubusercontent.com/u/1144075?v=4" width="100px;" alt="Luca Barone"/><br /><sub><b>Luca Barone</b></sub></a><br /><a href="https://github.com/testing-library/native-testing-library-docs/commits?author=cloud-walker" title="Documentation">📖</a></td>
   </tr>
 </table>
 
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors)

@@ -93,7 +93,17 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "cloud-walker",
+      "name": "Luca Barone",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/1144075?v=4",
+      "profile": "https://github.com/cloud-walker",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
-  "contributorsPerLine": 7
+  "contributorsPerLine": 7,
+  "skipCi": true
 }
