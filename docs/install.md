@@ -20,7 +20,7 @@ You will need `react`, `react-native`, and `react-test-renderer` installed as _d
 > unexpected behavior and have a sub-optimal experience if you do not use the preset.
 
 This library includes an easy to adopt and reliable Jest preset to maximize the
-confidence you have in your tests. It extends the `react-native` preset, and was created order to
+confidence you have in your tests. It extends the `react-native` preset, and was created in order to
 more closely mimic behavior you would expect from any other member of the `testing-library` family.
 
 ```diff
