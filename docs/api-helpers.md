@@ -19,7 +19,7 @@ import * as nativeTestingLib from '@testing-library/react-native';
 const { queryHelpers } = nativeTestingLib;
 
 export const queryByStyle = queryHelpers.queryByProp.bind(null, 'style');
-export const queryAllByStyle = queryHelpers.queryByProp.bind(null, 'style');
+export const queryAllByStyle = queryHelpers.queryAllByProp.bind(null, 'style');
 
 export function getAllByStyle(container, styles, ...rest) {
   const els = queryAllByStyle(container, styles, ...rest);
