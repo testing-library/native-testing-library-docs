@@ -82,6 +82,9 @@ select them or see them in debug output. These components wrap other components,
 let you select them directly. If you're having trouble selecting what you need to inside of one of
 these components that isn't mocked, just `debug()` to see what your users are seeing ☺️
 
+> Using `jest.useFakeTimers()` will stop several async functions like `get*` / `find*` and `wait` /
+> `waitForElement` from working.
+
 ## Exports
 
 You will likely be able to import everything you'll need from the project entry point like this:
