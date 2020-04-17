@@ -21,10 +21,16 @@ const UPDATE_EMAIL = gql`
 `;
 
 function UpdateEmailForm() {
-    const [uppdateEmail, data] = useMutation(UPDATE_EMAIL);
+    const [updateEmail, { data }] = useMutation(UPDATE_EMAIL);
     const [email, setEmail] = useState('');
 
     render() {
+        if (data) {
+            return (
+                <p>Email successfully updated</p>
+            )
+        };
+
         return (
             <View>
                 <TextInput
