@@ -38,6 +38,6 @@ touchable icon that doesn't have an accessibility label, so neither can your tes
 writing good tests using this library will force you to give more consideration to whether what
 you're doing is an accessible experience for all of your users.
 
-This library may work with any any testing framework like Jest or Mocha, but we do recommend you use
+This library may work with any testing framework like Jest or Mocha, but we do recommend you use
 Jest with the `react-native` Jest preset. We have not tested it in any other environment, and likely
 won't be able to support usage with another library.
