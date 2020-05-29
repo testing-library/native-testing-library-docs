@@ -22,7 +22,7 @@ elements match.
 
 `queryBy*` queries returns the first matching node for a query, and return `null` if no elements
 match. This is useful for asserting an element is not present. This throws if more than one match is
-found (use `queryAllBy` instead)..
+found (use `queryAllBy` instead).
 
 ### queryAllBy
 
