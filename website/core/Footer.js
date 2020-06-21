@@ -7,8 +7,8 @@
 
 const React = require('react');
 
-const ExternalLink = props => <a target="_blank" rel="noreferrer noopener" {...props} />;
-const Link = props => <a {...props} />;
+const ExternalLink = (props) => <a target="_blank" rel="noreferrer noopener" {...props} />;
+const Link = (props) => <a {...props} />;
 
 class Footer extends React.Component {
   docUrl(doc, language) {
@@ -60,11 +60,10 @@ class Footer extends React.Component {
             >
               Stack Overflow
             </a>
-            <a href="https://reactiflux.com/">Reactiflux on Discord</a>
+            <a href="https://discord.gg/c6JN9fM">Discord</a>
             <a href="https://twitter.com/TestingLib" target="_blank" rel="noreferrer noopener">
               Follow on Twitter
             </a>
-            <a href="https://spectrum.chat/testing-library/help-react-native?tab=posts">Spectrum</a>
           </div>
           <div>
             <h5>More</h5>

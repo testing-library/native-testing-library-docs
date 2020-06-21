@@ -12,15 +12,15 @@ const CompLibrary = require('../../core/CompLibrary.js');
 const Container = CompLibrary.Container;
 const GridBlock = CompLibrary.GridBlock;
 
-const ExternalLink = props => <a target="_blank" rel="noreferrer noopener" {...props} />;
-const Link = props => <a {...props} />;
+const ExternalLink = (props) => <a target="_blank" rel="noreferrer noopener" {...props} />;
+const Link = (props) => <a {...props} />;
 
 function Help(props) {
   const { config: siteConfig, language = '' } = props;
   const { baseUrl, docsUrl } = siteConfig;
   const docsPart = `${docsUrl ? `${docsUrl}/` : ''}`;
   const langPart = `${language ? `${language}/` : ''}`;
-  const docUrl = doc => `${baseUrl}${docsPart}${langPart}${doc}`;
+  const docUrl = (doc) => `${baseUrl}${docsPart}${langPart}${doc}`;
 
   const supportLinks = [
     {
@@ -28,12 +28,7 @@ function Help(props) {
       title: 'Stack Overflow',
     },
     {
-      content:
-        'Discuss issues with community members on [Spectrum](https://spectrum.chat/react-testing-library)',
-      title: 'Spectrum',
-    },
-    {
-      content: `Chat on [Discord](https://www.reactiflux.com/)`,
+      content: `Chat on [Discord](https://discord.gg/c6JN9fM)`,
       title: 'Discord',
     },
   ];
