@@ -17,15 +17,10 @@
       "version-2.0.0-api-render-hook",
       "version-2.0.0-api-act"
     ],
-    "Ecosystem": [
-      "version-2.0.0-ecosystem-jest-native"
-    ]
+    "Ecosystem": ["version-2.0.0-ecosystem-jest-native"]
   },
   "version-2.0.0-recipes": {
-    "Guides": [
-      "version-2.0.0-guide-queries",
-      "version-2.0.0-guide-disappearance"
-    ],
+    "Guides": ["version-2.0.0-guide-queries", "version-2.0.0-guide-disappearance"],
     "Examples": [
       "version-2.0.0-example-context",
       "version-2.0.0-example-input-event",

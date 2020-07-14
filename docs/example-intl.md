@@ -37,7 +37,7 @@ const FormatDateView = () => {
   );
 };
 
-const renderWithReactIntl = component => {
+const renderWithReactIntl = (component) => {
   return {
     ...render(<IntlProvider locale="pt">{component}</IntlProvider>),
   };

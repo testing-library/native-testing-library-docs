@@ -30,7 +30,7 @@ test('NameConsumer shows value from provider', () => {
 test('NameProvider composes full name from first, last', () => {
   const tree = (
     <NameProvider first="Boba" last="Fett">
-      <NameContext.Consumer>{value => <Text>Received: {value}</Text>}</NameContext.Consumer>
+      <NameContext.Consumer>{(value) => <Text>Received: {value}</Text>}</NameContext.Consumer>
     </NameProvider>
   );
   const { getByText } = render(tree);

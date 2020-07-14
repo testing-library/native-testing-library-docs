@@ -12,11 +12,11 @@ import { renderHook } from '../../';
 
 const getSomeName = () => Promise.resolve('Betty');
 
-const useName = prefix => {
+const useName = (prefix) => {
   const [name, setName] = useState('nobody');
 
   useEffect(() => {
-    getSomeName().then(theName => {
+    getSomeName().then((theName) => {
       setName(prefix ? `${prefix} ${theName}` : theName);
     });
   }, [prefix]);

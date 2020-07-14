@@ -13,8 +13,8 @@ import { renderHook, act } from '../../';
 function useCounter(initialCount = 0) {
   const [count, setCount] = useState(initialCount);
 
-  const incrementBy = useCallback(n => setCount(count + n), [count]);
-  const decrementBy = useCallback(n => setCount(count - n), [count]);
+  const incrementBy = useCallback((n) => setCount(count + n), [count]);
+  const decrementBy = useCallback((n) => setCount(count - n), [count]);
 
   return { count, incrementBy, decrementBy };
 }

@@ -15,16 +15,17 @@ Native.
 
 ## This solution
 
-React Native Testing Library (RNTL) is an implementation of the well-known Testing Library API that works
-for React Native. The primary goal is to mimic the testing library API as closely as possible while
-still accounting for the differences in the platforms. Accomplishing this is no small feat because
-of the differences between the two platforms. Although most framework implementations like React
-Testing Library (RTL) are thin layers over [DOM Testing Library (DTL)](https://testing-library.com),
-this library needed to have its own base implementation as well as a user-facing API. This library
-uses the [react-test-renderer](https://reactjs.org/docs/test-renderer.html), whereas DOM Testing
-Library (DTL) uses JSDOM. The main philosophy here is that you should find elements on the "screen"
-the way users would. This approach is meant to give you confidence that your app is working as a
-cohesive unit. Testing Library's primary philosophy is:
+React Native Testing Library (RNTL) is an implementation of the well-known Testing Library API that
+works for React Native. The primary goal is to mimic the testing library API as closely as possible
+while still accounting for the differences in the platforms. Accomplishing this is no small feat
+because of the differences between the two platforms. Although most framework implementations like
+React Testing Library (RTL) are thin layers over
+[DOM Testing Library (DTL)](https://testing-library.com), this library needed to have its own base
+implementation as well as a user-facing API. This library uses the
+[react-test-renderer](https://reactjs.org/docs/test-renderer.html), whereas DOM Testing Library
+(DTL) uses JSDOM. The main philosophy here is that you should find elements on the "screen" the way
+users would. This approach is meant to give you confidence that your app is working as a cohesive
+unit. Testing Library's primary philosophy is:
 
 > [The more your tests resemble the way your software is used, the more confidence they can give you.](guiding-principles.md)
 

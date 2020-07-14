@@ -1,22 +1,22 @@
 /* your custom css */
 body {
-    font-family: $fontMain;
-    font-size: 18px;
+  font-family: $fontMain;
+  font-size: 18px;
 }
 
 pre,
 code {
-    font-family: $fontCode;
+  font-family: $fontCode;
 }
 
 .hljs {
-    font-size: 13px;
+  font-size: 13px;
 }
 
 a {
-    color: $secondaryColor;
+  color: $secondaryColor;
 }
 
 .nav-footer {
-    background-color: $primaryColor;
+  background-color: $primaryColor;
 }

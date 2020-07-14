@@ -5,8 +5,8 @@ sidebar_label: Jest Matchers
 original_id: ecosystem-jest-native
 ---
 
-[`jest-native`](https://github.com/testing-library/jest-native) is a companion library that
-provides custom element matchers for Jest.
+[`jest-native`](https://github.com/testing-library/jest-native) is a companion library that provides
+custom element matchers for Jest.
 
 ```
 npm install --save-dev jest-native

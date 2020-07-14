@@ -162,7 +162,7 @@ function TestComponent() {
   const [count, setCount] = React.useState(0);
 
   return (
-    <Button onPress={() => setCount(state => state + 1)} title={`Click to increase: ${count}`} />
+    <Button onPress={() => setCount((state) => state + 1)} title={`Click to increase: ${count}`} />
   );
 }
 

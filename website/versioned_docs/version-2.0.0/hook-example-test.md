@@ -61,7 +61,7 @@ test('accepts wrapper option to wrap rendered hook with', () => {
     },
     {
       // eslint-disable-next-line react/display-name
-      wrapper: props => (
+      wrapper: (props) => (
         <ctxA.Provider value={3}>
           <ctxB.Provider value={4} {...props} />
         </ctxA.Provider>
@@ -74,8 +74,8 @@ test('accepts wrapper option to wrap rendered hook with', () => {
 test('returns result ref with latest result from hook execution', () => {
   function useCounter({ initialCount = 0, step = 1 } = {}) {
     const [count, setCount] = React.useState(initialCount);
-    const increment = () => setCount(c => c + step);
-    const decrement = () => setCount(c => c - step);
+    const increment = () => setCount((c) => c + step);
+    const decrement = () => setCount((c) => c - step);
     return { count, increment, decrement };
   }
 

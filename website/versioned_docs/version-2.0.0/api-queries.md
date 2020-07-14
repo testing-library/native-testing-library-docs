@@ -372,7 +372,7 @@ built-in normalization behavior:
 
 ```javascript
 getByText(node, 'text', {
-  normalizer: str => getDefaultNormalizer({ trim: false })(str).replace(/[\u200E-\u200F]*/g, ''),
+  normalizer: (str) => getDefaultNormalizer({ trim: false })(str).replace(/[\u200E-\u200F]*/g, ''),
 });
 ```
 
@@ -399,7 +399,7 @@ getByText(baseElement, /^hello world$/i); // full string match, ignore case
 getByText(baseElement, /Hello W?oRlD/i); // advanced regex
 
 // Matching with a custom function:
-getByText(baseElement, content => content.startsWith('Hello'));
+getByText(baseElement, (content) => content.startsWith('Hello'));
 ```
 
 **_Will not_ find a match:**

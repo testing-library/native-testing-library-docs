@@ -44,7 +44,7 @@ is what you can do in a case where you are **very** stuck and can't figure out w
 ```javascript
 // react-testing-library
 const { baseElement } = render(<MyComponent />);
-const icons = baseElement.findAll(node => node.props.name === 'menu');
+const icons = baseElement.findAll((node) => node.props.name === 'menu');
 ```
 
 We cannot stress enough that we _do not_ recommend that you do this. Your results will be

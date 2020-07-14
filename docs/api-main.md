@@ -160,7 +160,7 @@ function TestComponent() {
   const [count, setCount] = React.useState(0);
 
   return (
-    <Button onPress={() => setCount(state => state + 1)} title={`Click to increase: ${count}`} />
+    <Button onPress={() => setCount((state) => state + 1)} title={`Click to increase: ${count}`} />
   );
 }
 
@@ -193,9 +193,9 @@ test('renders into document', () => {
 // ... more tests ...
 ```
 
-In RNTL there is no DOM to cleanup, and your tests' rendered trees cannot
-interfere with each other. It is simply nice to be able to run any unmount logic in the components
-you have rendered in your tests.
+In RNTL there is no DOM to cleanup, and your tests' rendered trees cannot interfere with each other.
+It is simply nice to be able to run any unmount logic in the components you have rendered in your
+tests.
 
 **If you don't want to add this to _every single test file_** then we recommend that you configure
 your test framework to run a file before your tests which does this automatically. See the

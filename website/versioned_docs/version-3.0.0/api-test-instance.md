@@ -41,7 +41,7 @@ similar to `document.querySelectorAll`.
 
 ```javascript
 const { container } = render(<MyComponent />);
-const textNodes = container.findAll(node => node.getProp('accessibilityLabel') === 'hello world');
+const textNodes = container.findAll((node) => node.getProp('accessibilityLabel') === 'hello world');
 
 expect(textNodes).toHaveLength(2);
 ```
