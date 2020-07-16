@@ -22,7 +22,7 @@ jest.mock('NativeAnimatedHelper').mock('react-native-gesture-handler', () => {
   };
 });
 
-console.warn = arg => {
+console.warn = (arg) => {
   const warnings = [
     'Calling .measureInWindow()',
     'Calling .measureLayout()',

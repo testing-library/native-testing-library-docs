@@ -15,8 +15,8 @@ class CostInput extends React.Component {
     value: '',
   };
 
-  removeDollarSign = value => (value[0] === '$' ? value.slice(1) : value);
-  getReturnValue = value => (value === '' ? '' : `$${value}`);
+  removeDollarSign = (value) => (value[0] === '$' ? value.slice(1) : value);
+  getReturnValue = (value) => (value === '' ? '' : `$${value}`);
   handleChange = ({ nativeEvent }) => {
     const text = nativeEvent.text;
     const noDollarSign = this.removeDollarSign(text);

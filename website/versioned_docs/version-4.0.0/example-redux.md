@@ -35,7 +35,7 @@ class Counter extends React.Component {
   }
 }
 
-const ConnectedCounter = connect(state => ({ count: state.count }))(Counter);
+const ConnectedCounter = connect((state) => ({ count: state.count }))(Counter);
 
 function reducer(state = { count: 0 }, action) {
   switch (action.type) {

@@ -4,10 +4,9 @@ title: Navigation
 sidebar_label: Navigation
 ---
 
-
 ```js
 // <project-root-path>/__mocks__/react-native-gesture-handler.js
-// react-native-gesture-handler use native modules, we need to mock it. 
+// react-native-gesture-handler use native modules, we need to mock it.
 import { View } from 'react-native';
 
 export const State = {};
@@ -15,7 +14,6 @@ export const PanGestureHandler = View;
 export const BaseButton = View;
 export const Directions = {};
 ```
-
 
 ```javascript
 import React from 'react';
@@ -27,7 +25,7 @@ import { render, fireEvent } from '@testing-library/react-native';
 // NativeAnimatedHelper is not mocked by default on react native's jest setup file.
 jest.mock('NativeAnimatedHelper');
 
-console.warn = arg => {
+console.warn = (arg) => {
   const hiddenMessages = [
     'Calling .measureInWindow()',
     'Calling .measureLayout()',
@@ -36,7 +34,7 @@ console.warn = arg => {
     'Calling .blur()',
   ];
 
-  const warningShouldBeHidden = hiddenMessages.some(x => arg.includes(x))
+  const warningShouldBeHidden = hiddenMessages.some((x) => arg.includes(x));
 
   if (!warningShouldBeHidden) {
     console.warn(arg);

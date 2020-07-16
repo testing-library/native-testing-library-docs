@@ -51,7 +51,7 @@ test('should not capture error', () => {
 });
 
 test('should reset error', () => {
-  const { result, rerender } = renderHook(throwError => useError(throwError), {
+  const { result, rerender } = renderHook((throwError) => useError(throwError), {
     initialProps: true,
   });
 
@@ -92,7 +92,7 @@ test('should not capture async error', async () => {
 
 test('should reset async error', async () => {
   const { result, waitForNextUpdate, rerender } = renderHook(
-    throwError => useAsyncError(throwError),
+    (throwError) => useAsyncError(throwError),
     {
       initialProps: true,
     },

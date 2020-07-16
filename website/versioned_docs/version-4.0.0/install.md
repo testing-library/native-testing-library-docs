@@ -13,16 +13,17 @@ This module should be installed in your project's `devDependencies`:
 npm install --save-dev @testing-library/react-native
 ```
 
-You will need `react`, `react-native`, and `react-test-renderer` installed as _dependencies_ in order to run this project.
+You will need `react`, `react-native`, and `react-test-renderer` installed as _dependencies_ in
+order to run this project.
 
 ## Jest preset
 
 > It is **highly recommended** that you use the bundled Jest preset. You will likely experience
 > unexpected behavior and have a sub-optimal experience if you do not use the preset.
 
-This library includes an easy to adopt and reliable Jest preset to maximize the
-confidence you have in your tests. It extends the `react-native` preset, and was created order to
-more closely mimic behavior you would expect from any other member of the `testing-library` family.
+This library includes an easy to adopt and reliable Jest preset to maximize the confidence you have
+in your tests. It extends the `react-native` preset, and was created order to more closely mimic
+behavior you would expect from any other member of the `testing-library` family.
 
 ```diff
 // jest.config.js
@@ -44,8 +45,8 @@ module.exports = Object.assign(expoPreset, jestPreset, {
 });
 ```
 
-> If you use Expo, be sure to include the Expo setup files before this library's setup
-> files! If you're using React Native, there's no need to do anything extra.
+> If you use Expo, be sure to include the Expo setup files before this library's setup files! If
+> you're using React Native, there's no need to do anything extra.
 
 Generally speaking though, it's better to include any setup files you have in the
 `setupFilesAfterEnv` key of your Jest config.

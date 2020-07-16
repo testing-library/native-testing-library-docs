@@ -7,8 +7,8 @@ original_id: setup
 
 ## Setting up your project
 
-The API should work out of the box for most tests. All of the snippets you'll find throughout
-the website work without any additional configuration assuming you use Jest and a moderately recent
+The API should work out of the box for most tests. All of the snippets you'll find throughout the
+website work without any additional configuration assuming you use Jest and a moderately recent
 version of React Native.
 
 We strongly encourage you to use Jest with the `@testing-library/react-native` preset. The
@@ -40,9 +40,9 @@ module.exports = {
 
 It's often useful to define a custom render method that includes things like global context
 providers, data stores, etc. To make this available globally, one approach is to define a utility
-file that re-exports everything from this library. You can replace `@testing-library/react-native` with this
-file in all your imports. See [below](#configuring-jest-with-test-utils) for a way to make your test
-util file accessible without using relative paths.
+file that re-exports everything from this library. You can replace `@testing-library/react-native`
+with this file in all your imports. See [below](#configuring-jest-with-test-utils) for a way to make
+your test util file accessible without using relative paths.
 
 The example below sets up data providers using the [`wrapper`](api-main.md#render-options) option to
 `render`.
