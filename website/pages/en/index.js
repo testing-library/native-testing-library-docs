@@ -91,7 +91,19 @@ class Index extends React.Component {
               the more confidence they can give you.
             </i>
           </p>
-          <MarkdownBlock>`npm install --save-dev @testing-library/react-native`</MarkdownBlock>
+          <p>
+             🚨  This project has been deprecated and replaced by{' '}
+             <a href="https://callstack.github.io/react-native-testing-library/">
+               React Native Testing Library by Callstack
+             </a>.{' '}
+             <a href="https://callstack.github.io/react-native-testing-library/docs/migration-v7/#guide-for-testing-libraryreact-native-users"
+               Read the migration guide here
+             </a>
+          </p>
+          <p>
+            You can still install the old version like so:
+          </p>
+          <MarkdownBlock>`npm install --save-dev @testing-library/react-native@6`</MarkdownBlock>
         </div>
       </Container>
     );
