@@ -21,7 +21,7 @@
 //];
 
 const siteConfig = {
-  title: 'React Native Testing Library', // Title for your website.
+  title: '(DEPRECATED) React Native Testing Library', // Title for your website.
   tagline:
     'Simple and complete React Native testing utilities that encourage good testing practices.',
   url: 'https://native-testing-library.com', // Your website URL
@@ -38,7 +38,14 @@ const siteConfig = {
   //   organizationName: 'JoelMarcey'
 
   // For no header links in the top nav bar -> headerLinks: [],
-  headerLinks: [{ doc: 'intro', label: 'Docs' }, { doc: 'guide-queries', label: 'Recipes' }],
+  headerLinks: [
+    { doc: 'intro', label: 'Docs' },
+    { doc: 'guide-queries', label: 'Recipes' },
+    {
+      href: 'https://callstack.github.io/react-native-testing-library/docs/migration-v7/#guide-for-testing-libraryreact-native-users',
+      label: 'Deprecation Info and Migration Guide',
+    },
+  ],
 
   // If you have users set above, you add it here:
   //  users,
