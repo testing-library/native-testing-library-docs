@@ -96,7 +96,7 @@ class Index extends React.Component {
              <a href="https://callstack.github.io/react-native-testing-library/">
                React Native Testing Library by Callstack
              </a>.{' '}
-             <a href="https://callstack.github.io/react-native-testing-library/docs/migration-v7/#guide-for-testing-libraryreact-native-users"
+             <a href="https://callstack.github.io/react-native-testing-library/docs/migration-v7/#guide-for-testing-libraryreact-native-users">
                Read the migration guide here
              </a>
           </p>
