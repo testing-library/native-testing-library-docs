@@ -21,7 +21,7 @@
 //];
 
 const siteConfig = {
-  title: '(DEPRECATED) React Native Testing Library', // Title for your website.
+  title: '⚠️ (DEPRECATED) React Native Testing Library', // Title for your website.
   tagline:
     'Simple and complete React Native testing utilities that encourage good testing practices.',
   url: 'https://native-testing-library.com', // Your website URL
@@ -43,7 +43,7 @@ const siteConfig = {
     { doc: 'guide-queries', label: 'Recipes' },
     {
       href: 'https://callstack.github.io/react-native-testing-library/docs/migration-v7/#guide-for-testing-libraryreact-native-users',
-      label: 'Deprecation Info and Migration Guide',
+      label: '⚠️ Deprecation Info and Migration Guide ⚠️',
     },
   ],
 
