@@ -119,7 +119,7 @@ This is a simple wrapper around `prettyPrint` which is also exported.
 
 ### `rerender`
 
-Although its likely better to test updating your props the way a user would (through events and
+Although it's likely better to test updating your props the way a user would (through events and
 interaction), this method will allow you to re-render your entire tree at the base with new props.
 
 ```jsx

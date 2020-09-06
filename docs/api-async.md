@@ -56,7 +56,7 @@ function waitForElement<T>(
 ```
 
 When you need to wait for elements to appear, you can use `waitForElement`. The `waitForElement`
-function is a similar to `wait`, but is specifically intended to wait for an element to appear.
+function is similar to `wait`, but is specifically intended to wait for an element to appear.
 Additionally, the result is returned for you to use.
 
 Here's a simple example:
