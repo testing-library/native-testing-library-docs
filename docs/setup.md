@@ -101,3 +101,25 @@ module.exports = {
   // ... other options ...
 }
 ```
+#### Known issues
+
+TouchableOpacity not visible when using RN 0.62
+
+see https://github.com/testing-library/native-testing-library/issues/113
+
+You can apply this temporary fix by mocking TouchableOpacity with TouchableHighlight in jest.setup.js file:
+
+```js
+jest.mock(
+    'react-native/Libraries/Components/Touchable/TouchableOpacity.js',
+    () => {
+        const { TouchableHighlight } = require('react-native')
+        const MockTouchable = props => {
+            return <TouchableHighlight {...props} />
+        }
+        MockTouchable.displayName = 'TouchableOpacity'
+
+        return MockTouchable
+    }
+)
+```
