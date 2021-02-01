@@ -77,12 +77,12 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/hansjhoffman"><img src="https://avatars2.githubusercontent.com/u/9221098?v=4" width="100px;" alt=""/><br /><sub><b>Hans Hoffman</b></sub></a><br /><a href="https://github.com/testing-library/native-testing-library-docs/commits?author=hansjhoffman" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/cloud-walker"><img src="https://avatars3.githubusercontent.com/u/1144075?v=4" width="100px;" alt=""/><br /><sub><b>Luca Barone</b></sub></a><br /><a href="https://github.com/testing-library/native-testing-library-docs/commits?author=cloud-walker" title="Documentation">📖</a></td>
     <td align="center"><a href="https://github.com/lhache"><img src="https://avatars3.githubusercontent.com/u/4593884?v=4" width="100px;" alt=""/><br /><sub><b>Louis H</b></sub></a><br /><a href="https://github.com/testing-library/native-testing-library-docs/commits?author=lhache" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/steve-galili-09434698/"><img src="https://avatars0.githubusercontent.com/u/25864161?v=4" width="100px;" alt=""/><br /><sub><b>Steve Galili</b></sub></a><br /><a href="https://github.com/testing-library/native-testing-library-docs/commits?author=vanGalilea" title="Documentation">📖</a></td>
   </tr>
 </table>
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
-
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors)
